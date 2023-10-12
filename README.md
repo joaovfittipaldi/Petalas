@@ -9,24 +9,24 @@
 
 <p align="center">
   <img
-    src="https://img.shields.io/github/repo-size/caetrias/connectcesar?style=flat"
+    src="https://img.shields.io/github/repo-size/Jonny-Jay/Petalas?style=flat"
     alt="Repository Size"
   />
   <img
-    src="https://img.shields.io/github/languages/count/caetrias/connectcesar?style=flat&logo=python"
+    src="https://img.shields.io/github/languages/count/Jonny-Jay/Petalas?style=flat&logo=python"
     alt="Language Count"
   />
   <img
-    src="https://img.shields.io/bitbucket/issues/caetrias/connectcesar?style=flat&logo=github"
+    src="https://img.shields.io/bitbucket/issues/Jonny-Jay/Petalas?style=flat&logo=github"
     alt="Open Issues"
   />
   <img
-    src="https://img.shields.io/github/commit-activity/t/caetrias/connectcesar?style=flat&logo=github"
+    src="https://img.shields.io/github/commit-activity/t/Jonny-Jay/Petalas?style=flat&logo=github"
     alt="Commit Activity"
   />
   <a href="LICENSE.md"
     ><img
-      src="https://img.shields.io/github/license/caetrias/connectcesar"
+      src="https://img.shields.io/github/license/Jonny-Jay/Petalas"
       alt="License"
   /></a>
 </p>
