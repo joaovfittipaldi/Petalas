@@ -1,44 +1,200 @@
-<h1 align ="center">Pétalas</h1>
+<h1 align="center">Pétalas</h1>
 
->Status: 🚧 Em desenvolvimento... 🚧
+<p align="center">
+  <img
+    src="https://img.shields.io/badge/Status-Em%20desenvolvimento-green?style=flat-square"
+    alt="Status"
+  />
+</p>
 
-# Índice
-* [Equipe](#equipe)
-* [Licença](#licença)
+<p align="center">
+  <img
+    src="https://img.shields.io/github/repo-size/caetrias/connectcesar?style=flat"
+    alt="Repository Size"
+  />
+  <img
+    src="https://img.shields.io/github/languages/count/caetrias/connectcesar?style=flat&logo=python"
+    alt="Language Count"
+  />
+  <img
+    src="https://img.shields.io/bitbucket/issues/caetrias/connectcesar?style=flat&logo=github"
+    alt="Open Issues"
+  />
+  <img
+    src="https://img.shields.io/github/commit-activity/t/caetrias/connectcesar?style=flat&logo=github"
+    alt="Commit Activity"
+  />
+  <a href="LICENSE.md"
+    ><img
+      src="https://img.shields.io/github/license/caetrias/connectcesar"
+      alt="License"
+  /></a>
+</p>
 
-## Equipe
-* Arthur Brito
-* Beatriz Massud
-* Beatriz Sampaio
-* Bruno Ribeiro
-* Emanuel de Souza
-* Gustavo Akira
-* Igor Alves
-* João Fittipaldi
-* Júlia Falcão
-* Marcelo Teixeira
-* Rodrigo Bezerra
-* Vinicius Petribu
+<p>
+  COLOCAR UMA PREVE DESCRIÇÃO!!!
+  <br />
+  <br />
+</p>
 
-## Licença
-MIT License
+<h2>Links Importantes</h2>
+<ul>
+  <li>
+    <a href="https://connectcesar.azurewebsites.net/">MUDAR LINK AZURE</a>
+  </li>
+  <li>
+    <a
+      href="https://docs.google.com/document/d/1u0d6eJo4CssFMLD0yrG8uC1CYGwSa5j2c7FekSvYrls/edit"
+      >Instruções de uso PRECISA???</a
+    >
+  </li>
+  <li>
+    <a
+      href="https://www.figma.com/file/UyXPbIk4jsHQoTUXDffQGl/Connect-CESAR?type=design&node-id=516-91&mode=design"
+      >MUDAR LINK FIGMA</a
+    >
+  </li>
+  <li>
+    <a
+      href="https://connectcesar.atlassian.net/jira/software/projects/CC/boards/1/"
+      >MUDAR LINK JIRA</a
+    >
+  </li>
+</ul>
 
-Copyright (c) 2023 João Vítor Meneses Fittipaldi
+<p>Status Report 1</p>
+<ul>
+  <li>
+    <a
+      href="https://drive.google.com/drive/u/1/folders/17Od0QMrcoO7zWpWf8BNeMCmSD9pZeAAL"
+      >Screen Cast MUDAR LINK</a
+    >
+  </li>
+  <li>
+    <a
+      href="https://drive.google.com/drive/u/1/folders/17Od0QMrcoO7zWpWf8BNeMCmSD9pZeAAL"
+      >Quadro Jira PRECISA???</a
+    >
+  </li>
+  <li>
+    <a
+      href="https://drive.google.com/drive/u/1/folders/17Od0QMrcoO7zWpWf8BNeMCmSD9pZeAAL"
+      >Backlog Jira PRECISA???</a
+    >
+  </li>
+  <li>
+    <a
+      href="https://docs.google.com/document/d/1HMgFS6grvc7ghHJqa_3I_6-wmORn5KY4ejPAV3zUSWQ/edit"
+      >Programação em Par MUDAR LINK</a
+    >
+  </li>
+  <li>
+    <a
+      href="https://drive.google.com/drive/u/1/folders/1GFkLI7lYtK0-wmRKKt89O11iePMaiLzi"
+      >Diagrama de Atividades MUDAR LINK</a
+    >
+  </li>
+  <li>
+    <a
+      href="https://drive.google.com/drive/u/1/folders/1GFkLI7lYtK0-wmRKKt89O11iePMaiLzi"
+      >Issue/Bug Tracke MUDAR LINK</a
+    >
+  </li>
+</ul>
 
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
+<p align="center">
+  <img
+    src="https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54"
+    alt="Python"
+  />
+  <img
+    src="https://img.shields.io/badge/django-%23092E20.svg?style=for-the-badge&logo=django&logoColor=white"
+    alt="Django"
+  />
+  <img
+    src="https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white"
+    alt="HTML5"
+  />
+  <img
+    src="https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white"
+    alt="CSS3"
+  />
+  <img
+    src="https://img.shields.io/badge/bootstrap-%238511FA.svg?style=for-the-badge&logo=bootstrap&logoColor=white"
+    alt="Bootstrap"
+  />
+  <img
+    src="https://img.shields.io/badge/Visual%20Studio%20Code-0078d7.svg?style=for-the-badge&logo=visual-studio-code&logoColor=white"
+    alt="Visual Studio Code"
+  />
+  <img
+    src="https://img.shields.io/badge/azure-%230072C6.svg?style=for-the-badge&logo=microsoftazure&logoColor=white"
+    alt="Azure"
+  />
+  <img
+    src="https://img.shields.io/badge/jira-%230A0FFF.svg?style=for-the-badge&logo=jira&logoColor=white"
+    alt="Jira"
+  />
+  <img
+    src="https://img.shields.io/badge/figma-%23F24E1E.svg?style=for-the-badge&logo=figma&logoColor=white"
+    alt="Figma"
+  />
+  <img
+    src="https://img.shields.io/badge/git-%23F05033.svg?style=for-the-badge&logo=git&logoColor=white"
+    alt="Git"
+  />
+</p>
 
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
+<h2>Equipe</h2>
+<p>Ciência da Computação</p>
+<ul>
+  <li>
+    <a href="https://github.com/ArthurpBrito">Arthur Brito</a> -
+    apb@cesar.school 📩
+  </li>
+  <li>
+    <a href="https://github.com/brunoribeirol">Bruno Ribeiro</a> -
+    brlla@cesar.school 📩
+  </li>
+  <li>
+    <a href="https://github.com/couboii">Emanuel Eduardo</a> -
+    eess2@cesar.school 📩
+  </li>
+  <li>
+    <a href="https://github.com/iaa877">Igor Alves</a> - iaa@cesar.school 📩
+  </li>
+  <li>
+    <a href="https://github.com/Jonny-Jay">João Vítor Meneses</a> -
+    jvmf@cesar.school 📩
+  </li>
+  <li>
+    <a href="https://github.com/vinipetribu">Vinícius Petribu</a> -
+    vclp@cesar.school 📩
+  </li>
+</ul>
+<p>Design</p>
+<ul>
+  <li>
+    <p>Ana Beatriz Massud - abmam@cesar.school 📩</p>
+  </li>
+  <li>
+    <p>Beatriz Sampaio - bscm@cesar.school 📩</p>
+  </li>
+  <li>
+    <p>Gustavo Akira - gaci@cesar.school 📩</p>
+  </li>
+  <li>
+    <p>Júlia Falcão - jfg@cesar.school 📩</p>
+  </li>
+  <li>
+    <p>Marcelo Bezerra - mbmt@cesar.school 📩</p>
+  </li>
+  <li>
+    <p>Rodrigo Bezerra - rbsf@cesar.school 📩</p>
+  </li>
+</ul>
 
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
+<h2>Contribuíntes 👨‍👩‍👧‍👦</h2>
+<a href="https://github.com/Jonny-Jay/Petalas/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=Jonny-Jay/Petalas" />
+</a>
