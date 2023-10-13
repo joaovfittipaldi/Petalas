@@ -26,3 +26,6 @@ def listagem_crianca(request):
     }
 
     return render(request, 'criancas.html', criancas)
+
+def home(request):
+    return render(request, 'home.html')
