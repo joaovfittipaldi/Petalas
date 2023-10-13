@@ -3,7 +3,7 @@ from .models import Crianca
 
 # Create your views here.
 
-def home(request):
+def cadastro_crianca(request):
     return render(request, 'cadastro_crianca.html')
 
 def listagem_crianca(request):
