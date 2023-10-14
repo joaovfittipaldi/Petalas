@@ -1,0 +1,46 @@
+body {
+  background-color: #fff2cc; /* Cor de fundo do site (#fff2cc) */
+  color: #783f04; /* Cor da fonte preta (#783f04) */
+}
+
+.titulo {
+  color: #a35713; /* Cor do título em azul (#a35713) */
+}
+
+.navbar.custom-navbar {
+  background-color: #4f943c; /* Cor de fundo do cabeçalho (#4f943c) */
+}
+
+.navbar-brand {
+  color: #ffffff; /* Cor do título do cabeçalho (#ffffff) */
+}
+
+.btn {
+  background-color: #783f04; /* Cor de fundo dos botões (#783f04) */
+  color: #fff; /* Cor do texto nos botões (#fff) */
+}
+
+.small {
+  color: #783f04; /* Cor do texto pequeno (#783f04) */
+}
+
+.custom-navbar {
+  background-color: #d9d9d9;
+  padding: 20px 20px;
+}
+.ong-title {
+  font-size: 28px;
+  text-align: center;
+  flex-grow: 1;
+}
+.custom-circle {
+  width: 80px;
+  height: 80px;
+  background-color: white;
+  border-radius: 50%;
+  margin: 0 20px;
+}
+.cargo-text {
+  text-align: center;
+  flex-grow: 1.1;
+}
