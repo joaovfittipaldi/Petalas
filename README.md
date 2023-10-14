@@ -50,8 +50,14 @@
   </li>
   <li>
     <a
-      href="https://www.figma.com/file/UyXPbIk4jsHQoTUXDffQGl/Connect-CESAR?type=design&node-id=516-91&mode=design"
-      >MUDAR LINK FIGMA</a
+      href="https://www.figma.com/file/zI0c4oozaZSB8tJWSXG0hi/LO-FI-p%C3%A9talas?type=design&node-id=0-1&mode=design&t=VV010uN7oL5XlviK-0"
+      >Protótipos Lo-Fi (Figma)</a
+    >
+  </li>
+  <li>
+    <a
+      href="https://trello.com/b/KmRWKFG5/projetos"
+      >Trello do projeto</a
     >
   </li>
   <li>
