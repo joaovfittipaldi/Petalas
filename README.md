@@ -90,8 +90,8 @@
   </li>
   <li>
     <a
-      href="https://docs.google.com/document/d/1HMgFS6grvc7ghHJqa_3I_6-wmORn5KY4ejPAV3zUSWQ/edit"
-      >Programação em Par MUDAR LINK</a
+      href="https://docs.google.com/document/d/12WzarDKRioVPRG49SQ_295nON9rk74GDR3W6Ke5bvbA/edit"
+      >Programação em Par</a
     >
   </li>
   <li>
