@@ -72,8 +72,14 @@
 <ul>
   <li>
     <a
-      href="https://drive.google.com/drive/u/1/folders/17Od0QMrcoO7zWpWf8BNeMCmSD9pZeAAL"
-      >Screen Cast MUDAR LINK</a
+      href="https://docs.google.com/document/d/1iQNB5QMGJxw8iCMjCIQ4oLCSGe9qLoX5X6_qNVmZIcw/edit?usp=drive_link"
+      >Histórias do usuário</a
+    >
+  </li>
+  <li>
+    <a
+      href="https://drive.google.com/file/d/15agELfIYmGEonoYUZ2U4N_vbTcn13H4S/view?usp=drive_link"
+      >Screencast do protótipo lo-fi</a
     >
   </li>
   <li>
