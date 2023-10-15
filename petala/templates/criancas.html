@@ -1,26 +1,61 @@
-{% include "navbar.html" %}
+{% include "navbar.html "%}
 
-<div class="container mt-4">
-  <div class="row">
-    {% for crianca in criancas %}
-    <div class="col-lg-4">
-      <div class="card mb-4">
-        <div class="card-body">
-          <h5 class="titulo">Nome da Criança</h5>
-          <p>ID: {{crianca.id_crianca}}</p>
-          <p>Nome: {{crianca.nome}}</p>
-          <p>Idade: {{crianca.idade}}</p>
-          <p>Nascimento: {{crianca.nascimento}}</p>
-          <p>Status: {{crianca.status}}</p>
-          <p>Período: {{crianca.periodo}}</p>
-          <p>Entrada: {{crianca.entrada}}</p>
-          <p>Permanência: {{crianca.permanencia}}</p>
-          <p>Turma: {{crianca.turma}}</p>
-          <p>Autoavaliação: {{crianca.autoavaliacao}}</p>
-          <p>Faltas: {{crianca.faltas}}</p>
-        </div>
-      </div>
+<style> 
+  .custom-btn{
+    font-size: large;
+  }
+
+  .custom-name{
+    font-size: x-large;
+    color: #783f04;
+    display: flex; /* Adicionado para usar flexbox */
+    align-items: center; /* Centraliza verticalmente o texto */
+    justify-content: center; /* Centraliza horizontalmente o texto */
+    flex: 1; /* Ocupa todo o espaço restante após a imagem */
+  }
+
+  .child-card {
+    background-color: #D9D9D9;
+    width: 100%;
+    padding: 22px;
+    height: 90px;
+    display: flex; /* Adicionado para alinhar os itens horizontalmente */
+    align-items: center; /* Alinha os itens verticalmente no centro */
+  }
+
+  .child-image {
+    margin-right: 15px; /* Espaçamento entre a imagem e o texto */
+    background: #ffffff;
+    width: 70px;
+    height: 70px;
+    border: 2px; /* Adiciona uma borda ao redor da imagem */
+    padding: 3px; /* Adiciona um pouco de espaço entre a imagem e a borda */
+  }
+</style> 
+
+<body>
+
+  <div class="container"> <br>
+    <div class="d-flex justify-content-between py-3">
+      <a href="/" class="btn custom-btn">VOLTAR</a>
+      <a href="/cadastro_crianca/" class="btn custom-btn">REGISTRAR NOVA CRIANÇA</a>
     </div>
-    {% endfor %}
+
+    <br> <br>
+
+    <div class="row"> 
+      {% for crianca in criancas %}
+      <div class="col-md-6 justify-content-between">
+        <div class="child-card">
+          <a href="{% url 'info_crianca' crianca.id_crianca %}" class="child-image"> </a>
+          <div class="custom-name"> 
+            <b> {{crianca.nome|title}} </b>
+          </div>
+        </div>
+        <br>
+      </div>
+      {% endfor %}
+    </div> 
   </div>
-</div>
+
+</body>

@@ -27,6 +27,12 @@ def listagem_crianca(request):
 
     return render(request, 'criancas.html', criancas)
 
+def info_crianca(request, crianca_id):
+    crianca =  Crianca.objects.get(id_crianca=crianca_id)
+    context = {'crianca': crianca}
+    return render(request, 'info_crianca.html', context)
+    
+
 def home(request):
     return render(request, 'home.html')
 
