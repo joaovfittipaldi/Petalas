@@ -56,7 +56,7 @@
   </li>
   <li>
     <a
-      href=["https://trello.com/b/KmRWKFG5/projetos"](https://trello.com/invite/b/KmRWKFG5/ATTI4df69d1d0a900c0ebd9890a5846090e2A06981B0/projetos)
+      href="https://trello.com/invite/b/KmRWKFG5/ATTI4df69d1d0a900c0ebd9890a5846090e2A06981B0/projetos"
       >Trello do projeto</a
     >
   </li>
