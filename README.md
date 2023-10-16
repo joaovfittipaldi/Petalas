@@ -56,14 +56,8 @@
   </li>
   <li>
     <a
-      href="https://trello.com/b/KmRWKFG5/projetos"
+      href=["https://trello.com/b/KmRWKFG5/projetos"](https://trello.com/invite/b/KmRWKFG5/ATTI4df69d1d0a900c0ebd9890a5846090e2A06981B0/projetos)
       >Trello do projeto</a
-    >
-  </li>
-  <li>
-    <a
-      href="https://connectcesar.atlassian.net/jira/software/projects/CC/boards/1/"
-      >MUDAR LINK JIRA</a
     >
   </li>
 </ul>
@@ -84,18 +78,6 @@
   </li>
   <li>
     <a
-      href="https://drive.google.com/drive/u/1/folders/17Od0QMrcoO7zWpWf8BNeMCmSD9pZeAAL"
-      >Quadro Jira PRECISA???</a
-    >
-  </li>
-  <li>
-    <a
-      href="https://drive.google.com/drive/u/1/folders/17Od0QMrcoO7zWpWf8BNeMCmSD9pZeAAL"
-      >Backlog Jira PRECISA???</a
-    >
-  </li>
-  <li>
-    <a
       href="https://docs.google.com/document/d/12WzarDKRioVPRG49SQ_295nON9rk74GDR3W6Ke5bvbA/edit"
       >Programação em Par</a
     >
@@ -109,7 +91,7 @@
   <li>
     <a
       href="https://drive.google.com/drive/u/1/folders/1GFkLI7lYtK0-wmRKKt89O11iePMaiLzi"
-      >Issue/Bug Tracke MUDAR LINK</a
+      >Issue/Bug Tracker MUDAR LINK</a
     >
   </li>
 </ul>
