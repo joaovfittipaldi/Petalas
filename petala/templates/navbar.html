@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="pt-BR">
   <head>
@@ -8,18 +9,40 @@
       href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
       rel="stylesheet"
     />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Serif:wght@500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Rokkitt:wght@400;600;700&display=swap">
+
     <style>
       body {
         background-color: #fff2cc;
         color: #783f04;
       }
 
-      .titulo {
+      .titulo-fonte-marca{
+        color: #ffffff;
+        font-family: 'Rokkitt', serif;
+        font-weight: 700;
+      }
+
+      .texto-fonte-marca{
+        color: #ffffff;
+        font-family: 'Rokkitt', serif;
+        font-weight: 400;
+      }
+
+      .titulo-site {
         color: #a35713;
+        font-family: 'Roboto Serif', Serif;
+        font-weight: 600;
+      }
+
+      .texto-site{
+        font-family: 'Roboto Serif', Serif;
+        font-weight: 500;
       }
 
       .navbar.custom-navbar {
-        background-color: #4f943c; 
+        background-image:url('{% static 'img/flor_header.png' %}')
       }
 
       .navbar-brand {
@@ -36,32 +59,53 @@
       }
 
       .custom-navbar {
-        background-color: #d9d9d9;
-        padding: 20px 20px;
+        padding: 10px 20px;
       }
       .ong-title {
         font-size: 28px;
+        font-size: xx-large;
         text-align: center;
         flex-grow: 1;
       }
       .custom-circle {
-        width: 80px;
-        height: 80px;
-        background-color: white;
+        width: 100px;
+        height: 100px;
         border-radius: 50%;
-        margin: 0 20px;
+        margin: -10px 20px;
       }
       .cargo-text {
         text-align: center;
-        flex-grow: 1.1;
+        flex-grow: 1;
+      }
+
+      .card-body p{
+        font-size: large;
+        font-family: 'Roboto Serif', Serif;
+        font-weight: 500;
+      }
+
+      .button-customize {
+        justify-content: space-between;
+        align-items: center;
+        width: 25%;
+        height: 70px;
+        font-size: xx-large;
+      }
+
+      .card{
+        background-color: #fff2cc;
+      }
+
+      .custom-btn{
+        font-size: large;
       }
     </style>
   </head>
   <body>
     <nav class="navbar custom-navbar d-flex justify-content-between">
-      <div class="ong-title">NOME DA ONG</div>
-      <div class="custom-circle"></div>
-      <div class="cargo-text">FULANO - CARGO</div>
+      <div class="ong-title titulo-fonte-marca">PÉTALAS</div>
+      <img src="{% static "img/Logo.png" %}" alt="Logo" class="custom-circle">
+      <div class="cargo-text texto-fonte-marca">FULANO - CARGO</div>
     </nav>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>

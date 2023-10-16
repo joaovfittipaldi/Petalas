@@ -1,23 +1,27 @@
 {% include "navbar.html" %}
 
-<div class="container mt-4">
-  <div class="row">
-    <div class="col-lg-4">
-      <div class="card mb-4">
-        <div class="card-body">
-          <h5 class="titulo">{{crianca.nome}}</h5>
-          <p>ID: {{crianca.id_crianca}}</p>
-          <p>Idade: {{crianca.idade}}</p>
-          <p>Nascimento: {{ crianca.nascimento|date:"d-m-Y" }}</p>
-          <p>Status: {{crianca.status}}</p>
-          <p>Período: {{crianca.periodo}}</p>
-          <p>Entrada: {{crianca.entrada|date:"d-m-Y"}}</p>
-          <p>Permanência: {{crianca.permanencia}}</p>
-          <p>Turma: {{crianca.turma}}</p>
-          <p>Autoavaliação: {{crianca.autoavaliacao}}</p>
-          <p>Faltas: {{crianca.faltas}}</p>
-        </div>
+<div class="container"> <br>
+  <div class="d-flex justify-content-between py-3">
+    <a href="/criancas/" class="btn custom-btn titulo-site">VOLTAR</a>
+    <a href="#" class="btn custom-btn titulo-site">ATIVIDADES DA CRIANÇA</a>
+  </div>
+  <div class="container mt-4 d-flex align-items-center justify-content-center">
+    <div class="card col-lg-5">
+      <div class="card-body">
+        <h5 class="titulo-site text-center" style="color: #bf9000; font-size: x-large">{{crianca.nome}}</h5>
+        <p>ID: {{crianca.id_crianca}}</p>
+        <p>Idade: {{crianca.idade}}</p>
+        <p>Nascimento: {{ crianca.nascimento|date:"d-m-Y" }}</p>
+        <p>Status: {{crianca.status}}</p>
+        <p>Período: {{crianca.periodo}}</p>
+        <p>Entrada: {{crianca.entrada|date:"d-m-Y"}}</p>
+        <p>Permanência: {{crianca.permanencia}}</p>
+        <p>Turma: {{crianca.turma}}</p>
+        <p>Autoavaliação: {{crianca.autoavaliacao}}</p>
+        <p>Faltas: {{crianca.faltas}}</p>
       </div>
     </div>
-  </div>
 </div>
+</div>
+
+
