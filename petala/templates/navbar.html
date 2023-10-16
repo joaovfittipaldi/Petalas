@@ -68,8 +68,8 @@
         flex-grow: 1;
       }
       .custom-circle {
-        width: 100px;
-        height: 100px;
+        width: 80px;
+        height: 80px;
         border-radius: 50%;
         margin: -10px 20px;
       }
@@ -99,6 +99,17 @@
       .custom-btn{
         font-size: large;
       }
+
+      .no-gutters > .col-4 {
+        padding-right: 0;
+        padding-left: 0;
+      }
+      .no-gutters img {
+        width: 100%;  /* Isso garante que a imagem ocupa toda a largura da coluna. */
+        height: auto; /* Isso mantém a proporção original da imagem. */
+        display: block; /
+      }
+
     </style>
   </head>
   <body>
@@ -107,6 +118,14 @@
       <img src="{% static "img/Logo.png" %}" alt="Logo" class="custom-circle">
       <div class="cargo-text texto-fonte-marca">FULANO - CARGO</div>
     </nav>
+
+    <footer style="position: fixed; bottom: 0; width: 100%; padding-left: 0; padding-right: 0;">
+      <div class="row no-gutters">
+        <div class="col-4"> <img src="{% static 'img/flores_sem_fundo_updated.png' %}" alt="Rodapé"> </div>
+        <div class="col-4"> <img src="{% static 'img/flores_sem_fundo_updated.png' %}" alt="Rodapé"> </div>
+        <div class="col-4"> <img src="{% static 'img/flores_sem_fundo_updated.png' %}" alt="Rodapé"> </div>
+      </div>
+    </footer>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
