@@ -84,8 +84,8 @@
   </li>
   <li>
     <a
-      href="https://drive.google.com/drive/u/1/folders/1GFkLI7lYtK0-wmRKKt89O11iePMaiLzi"
-      >Diagrama de Atividades MUDAR LINK</a
+      href="https://drive.google.com/file/d/1tuLJS6vCmWwoGI2LQy5c9BHb0-xOlC_K/view?usp=sharing"
+      >Diagrama de Atividades</a
     >
   </li>
   <li>
