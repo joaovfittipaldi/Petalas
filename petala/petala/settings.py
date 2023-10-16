@@ -62,7 +62,7 @@ SECRET_KEY = 'django-insecure-!13#b$1dq5*&j9q%afn$#b@2$em5xi38eoar2c-gh!a_+088fo
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['petalas.azurewebsites.net']
 
 
 # Application definition
