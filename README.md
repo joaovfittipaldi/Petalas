@@ -44,7 +44,7 @@
   </li>
   <li>
     <a
-      href="https://docs.google.com/document/d/1u0d6eJo4CssFMLD0yrG8uC1CYGwSa5j2c7FekSvYrls/edit"
+      href="https://docs.google.com/document/d/1a5kTBLDb710azFYfHj66hniaKDi7ft57ajdeN_SQQok/edit"
       >Instruções de uso</a
     >
   </li>
