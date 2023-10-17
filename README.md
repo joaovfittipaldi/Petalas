@@ -32,7 +32,7 @@
 </p>
 
 <p>
-  COLOCAR UMA PREVE DESCRIÇÃO!!!
+  Site criado com o objetivo de auxiliar a ONG Gotas de Flor com Amor na organização de informações relacionadas às crianças asssistidas e às doações recebidas.
   <br />
   <br />
 </p>
