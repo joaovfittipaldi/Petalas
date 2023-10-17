@@ -86,7 +86,7 @@
   </li>
   <li>
     <a
-      href="https://drive.google.com/file/d/1eYLLZWC5vdgGJOV27nX_zFX2ydLxUGMa/view?usp=drive_link"
+      href="https://drive.google.com/file/d/1EHfK1jxDRtIVWjtKVBtBhs103WK0IwG1/view?usp=sharing"
       >Issue/Bug Tracker</a
     >
   </li>
