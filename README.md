@@ -17,10 +17,6 @@
     alt="Language Count"
   />
   <img
-    src="https://img.shields.io/bitbucket/issues/Jonny-Jay/Petalas?style=flat&logo=github"
-    alt="Open Issues"
-  />
-  <img
     src="https://img.shields.io/github/commit-activity/t/Jonny-Jay/Petalas?style=flat&logo=github"
     alt="Commit Activity"
   />
