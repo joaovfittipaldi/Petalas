@@ -126,10 +126,6 @@
     alt="Azure"
   />
   <img
-    src="https://img.shields.io/badge/jira-%230A0FFF.svg?style=for-the-badge&logo=jira&logoColor=white"
-    alt="Jira"
-  />
-  <img
     src="https://img.shields.io/badge/figma-%23F24E1E.svg?style=for-the-badge&logo=figma&logoColor=white"
     alt="Figma"
   />
