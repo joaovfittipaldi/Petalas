@@ -186,7 +186,7 @@
   </li>
 </ul>
 
-<h2>Contribuíntes 👨‍👩‍👧‍👦</h2>
+<h2>Contribuintes 👨‍👩‍👧‍👦</h2>
 <a href="https://github.com/Jonny-Jay/Petalas/graphs/contributors">
   <img src="https://contrib.rocks/image?repo=Jonny-Jay/Petalas" />
 </a>
