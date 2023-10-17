@@ -90,6 +90,12 @@
       >Issue/Bug Tracker</a
     >
   </li>
+  <li>
+    <a
+      href="https://drive.google.com/file/d/1IqPxIzbbWtKngDhT7-7hSn2pxOmCAMjO/view?usp=sharing"
+      >Screencast do uso do sistema</a
+    >
+  </li>
 </ul>
 
 <p align="center">
