@@ -20,7 +20,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 load_dotenv(BASE_DIR / '.env')
 
 
-TARGET_ENV = os.getenv('TARGET_ENV')
+TARGET_ENV = os.getenv('TARGET_ENV', 'dev')
 NOT_PROD = not TARGET_ENV.lower().startswith('prod')
 
 if NOT_PROD:
@@ -62,7 +62,7 @@ SECRET_KEY = 'django-insecure-!13#b$1dq5*&j9q%afn$#b@2$em5xi38eoar2c-gh!a_+088fo
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['petalas.azurewebsites.net', '127.0.0.1', 'localhost']
 
 
 # Application definition
