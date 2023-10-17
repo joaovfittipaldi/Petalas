@@ -40,17 +40,22 @@
     <br> <br>
 
     <div class="row"> 
-      {% for crianca in criancas %}
-      <div class="col-md-6 justify-content-between">
-        <div class="child-card">
-          <a href="{% url 'info_crianca' crianca.id_crianca %}" class="child-image"> </a>
-          <div class="custom-name texto-site"> 
-            {{crianca.nome|title}}
+      {% if criancas %}
+        {% for crianca in criancas %}
+          <div class="col-md-6 justify-content-between">
+            <div class="child-card">
+              <a href="{% url 'info_crianca' crianca.id_crianca %}" class="child-image"> </a>
+              <div class="custom-name texto-site"> 
+                {{crianca.nome|title}}
+              </div>
+            </div>
+            <br>
           </div>
-        </div>
-        <br>
-      </div>
-      {% endfor %}
+        {% endfor %}
+      {% else %}
+      <h1> NENHUMA CRIANÇA REGISTRADA </h1>
+      {% endif %}
+      
     </div> 
   </div>
 
