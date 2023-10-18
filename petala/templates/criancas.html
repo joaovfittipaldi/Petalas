@@ -40,6 +40,7 @@
     <br> <br>
 
     <div class="row">
+      {% if crianca %}
         {% for crianca in criancas %}
           <div class="col-md-6 justify-content-between">
             <div class="child-card">
@@ -50,7 +51,10 @@
             </div>
             <br>
           </div>
-        {% endfor %}      
+        {% endfor %}
+      {% else %} 
+        <h1> NÃO HÁ CRIANÇAS CADASTRADAS </h1>   
+      {% endif %}
     </div> 
   </div>
 

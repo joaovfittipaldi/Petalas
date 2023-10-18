@@ -17,10 +17,6 @@
     alt="Language Count"
   />
   <img
-    src="https://img.shields.io/bitbucket/issues/Jonny-Jay/Petalas?style=flat&logo=github"
-    alt="Open Issues"
-  />
-  <img
     src="https://img.shields.io/github/commit-activity/t/Jonny-Jay/Petalas?style=flat&logo=github"
     alt="Commit Activity"
   />
@@ -32,7 +28,7 @@
 </p>
 
 <p>
-  COLOCAR UMA PREVE DESCRIÇÃO!!!
+  Site criado com o objetivo de auxiliar a ONG Gotas de Flor com Amor na organização de informações relacionadas às crianças asssistidas e às doações recebidas.
   <br />
   <br />
 </p>
@@ -40,12 +36,12 @@
 <h2>Links Importantes</h2>
 <ul>
   <li>
-    <a href="https://connectcesar.azurewebsites.net/">MUDAR LINK AZURE</a>
+    <a href="https://petalas.azurewebsites.net">Petalas Site</a>
   </li>
   <li>
     <a
-      href="https://docs.google.com/document/d/1u0d6eJo4CssFMLD0yrG8uC1CYGwSa5j2c7FekSvYrls/edit"
-      >Instruções de uso PRECISA???</a
+      href="https://docs.google.com/document/d/1a5kTBLDb710azFYfHj66hniaKDi7ft57ajdeN_SQQok/edit"
+      >Instruções de uso</a
     >
   </li>
   <li>
@@ -84,17 +80,74 @@
   </li>
   <li>
     <a
-      href="https://drive.google.com/drive/u/1/folders/1GFkLI7lYtK0-wmRKKt89O11iePMaiLzi"
-      >Diagrama de Atividades MUDAR LINK</a
+      href="https://drive.google.com/file/d/1tuLJS6vCmWwoGI2LQy5c9BHb0-xOlC_K/view?usp=sharing"
+      >Diagrama de Atividades</a
     >
   </li>
   <li>
     <a
-      href="https://drive.google.com/drive/u/1/folders/1GFkLI7lYtK0-wmRKKt89O11iePMaiLzi"
-      >Issue/Bug Tracker MUDAR LINK</a
+      href="https://drive.google.com/file/d/1EHfK1jxDRtIVWjtKVBtBhs103WK0IwG1/view?usp=sharing"
+      >Issue/Bug Tracker</a
+    >
+  </li>
+  <li>
+    <a
+      href="https://drive.google.com/file/d/1IqPxIzbbWtKngDhT7-7hSn2pxOmCAMjO/view?usp=sharing"
+      >Screencast do uso do sistema</a
     >
   </li>
 </ul>
+<h2>Desenvolvimento</h2>
+<ol>
+  <li>Instale o Python no seu computador.</li>
+  <li>Abra o seu terminal.</li>
+  <li>Cheque se você instalou o Python em sua máquina com o comando:</li>
+  <pre><code>python --version</code></pre>
+  <li>Feito isso, clone este repositório utilizando o comando:</li>
+  <pre><code>git clone https://github.com/Jonny-Jay/Petalas.git</code></pre>
+  <li>Crie um ambiente virtual, utilizando os comandos:</li>
+  <pre><code>python -m venv venv</code></pre>
+  <li>
+    Para a ativação do ambiente virtual que você criou, utilize o comando:
+  </li>
+  <ul>
+    <li>Para MacOS ou Linux:</li>
+    <pre><code>source venv/bin/activate</code></pre>
+    <li>Windows:</li>
+    <pre><code>venv\Scripts\activate.bat</code></pre>
+  </ul>
+  <li>Instale as dependências utilizando o comando:</li>
+  <pre><code>pip install -r ./requirements.txt</code></pre>
+  <li>
+    Entre no diretório onde você clonou o repositório, utilizando os comandos:
+  </li>
+  <ul>
+    <li>
+      Para listar:
+      <ul>
+        <li>
+          MacOs e Linux:
+          <pre><code>ls</code></pre>
+        </li>
+        <li>Windows:</li>
+        <pre><code>dir</code></pre>
+      </ul>
+    </li>
+    <li>Para acessar:</li>
+    <pre><code>cd</code></pre>
+  </ul>
+  <li>Acesse a pasta naturezaNaMesa</li>
+  <ul>
+    <li>Para MacOS e Linux, dê o comando</li>
+    <pre><code>python3 manage.py runserver</code></pre>
+    <li>Windows:</li>
+    <pre>pyhton manage.py runserver</pre>
+  </ul>
+  <li>
+    Feito todos esse passos, clique no link: http://127.0.0.1:8000/ e aproveite
+    nossa aplicação!
+  </li>
+</ol>
 
 <p align="center">
   <img
@@ -124,10 +177,6 @@
   <img
     src="https://img.shields.io/badge/azure-%230072C6.svg?style=for-the-badge&logo=microsoftazure&logoColor=white"
     alt="Azure"
-  />
-  <img
-    src="https://img.shields.io/badge/jira-%230A0FFF.svg?style=for-the-badge&logo=jira&logoColor=white"
-    alt="Jira"
   />
   <img
     src="https://img.shields.io/badge/figma-%23F24E1E.svg?style=for-the-badge&logo=figma&logoColor=white"
@@ -188,7 +237,7 @@
   </li>
 </ul>
 
-<h2>Contribuíntes 👨‍👩‍👧‍👦</h2>
+<h2>Contribuintes 👨‍👩‍👧‍👦</h2>
 <a href="https://github.com/Jonny-Jay/Petalas/graphs/contributors">
   <img src="https://contrib.rocks/image?repo=Jonny-Jay/Petalas" />
 </a>
