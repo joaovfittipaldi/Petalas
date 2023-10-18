@@ -20,10 +20,13 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 load_dotenv(BASE_DIR / '.env')
 
 
-TARGET_ENV = os.getenv('TARGET_ENV', 'dev')
+TARGET_ENV = os.getenv('TARGET_ENV')
 NOT_PROD = not TARGET_ENV.lower().startswith('prod')
 
 if NOT_PROD:
+    DEBUG = True
+    SECRET_KEY = 'django-insecure-!13#b$1dq5*&j9q%afn$#b@2$em5xi38eoar2c-gh!a_+088fo'
+    ALLOWED_HOSTS = ['petalas.azurewebsites.net']
     DATABASES = {
         'default': {
             'ENGINE': 'django.db.backends.sqlite3',
@@ -52,19 +55,6 @@ else:
             'OPTIONS': {'sslmode': 'require'},
         }
     }
-
-# Quick-start development settings - unsuitable for production
-# See https://docs.djangoproject.com/en/4.2/howto/deployment/checklist/
-
-# SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-!13#b$1dq5*&j9q%afn$#b@2$em5xi38eoar2c-gh!a_+088fo'
-
-# SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
-
-ALLOWED_HOSTS = ['petalas.azurewebsites.net']
-
-
 # Application definition
 
 INSTALLED_APPS = [
@@ -158,7 +148,7 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
 
-STATIC_URL = 'static/'
+# STATIC_URL = 'static/'
 STATIC_URL = os.environ.get('DJANGO_STATIC_URL', "/static/")
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
