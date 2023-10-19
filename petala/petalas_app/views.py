@@ -21,11 +21,11 @@ def listagem_crianca(request):
         nova_crianca.faltas = request.POST.get('faltas')
         nova_crianca.save()
 
-    criancas = {
+    context = {
         'criancas': Crianca.objects.all()
     }
 
-    return render(request, 'criancas.html', criancas)
+    return render(request, 'criancas.html', context)
 
 def info_crianca(request, crianca_id):
     crianca =  Crianca.objects.get(id_crianca=crianca_id)
