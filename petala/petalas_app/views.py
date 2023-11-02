@@ -1,5 +1,6 @@
 from django.shortcuts import render, redirect
 from .models import Crianca
+from django.core.exceptions import ObjectDoesNotExist
 
 # Create your views here.
 
@@ -20,12 +21,17 @@ def listagem_crianca(request):
         nova_crianca.autoavaliacao = request.POST.get('autoavaliacao')
         nova_crianca.faltas = request.POST.get('faltas')
         nova_crianca.save()
+        
+    try:
+        context = {
+            'criancas': Crianca.objects.all()
+        }
+        return render(request, 'criancas.html', context)
+    except ObjectDoesNotExist:
+        context['error'] = "Erro ao recuperar crianças do banco de dados."
+        return render(request, 'criancas.html', context)
 
-    criancas = {
-        'criancas': Crianca.objects.all()
-    }
-
-    return render(request, 'criancas.html', criancas)
+    
 
 def info_crianca(request, crianca_id):
     crianca =  Crianca.objects.get(id_crianca=crianca_id)
