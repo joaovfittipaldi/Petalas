@@ -1,0 +1,27 @@
+{% include "navbar.html" %}
+
+<form class="row g-3" method="post" action="{% url 'listagem_doacoes' %}">
+  {% csrf_token %}
+  <div class="col-md-6">
+    <label for="inputEmail4" class="form-label">Padrinho</label>
+    <input type="text" name="nome_padrinho" class="form-control" id="inputNomePadrinho" />
+  </div>
+  <div class="col-md-6">
+    <label for="inputPassword4" class="form-label">Valor</label>
+    <input type="number" name="valor" class="form-control" id="inputValor" />
+  </div>
+  <div class="col-md-6">
+    <label for="inputCity" class="form-label">Criança Apadrinhada</label>
+    <input type="text" name="nome_crianca" class="form-control" id="inputNomeCrianca" />
+  </div>
+  <div class="col-md-2">
+    <label for="inputZip" class="form-label">Descrição</label>
+    <input type="text" name="descricao" class="form-control" id="inputDescricao" />
+  </div>
+  <br />
+  <br />
+  <br />
+  <div class="col-12">
+    <button type="submit" class="btn btn-primary">Cadastrar</button>
+  </div>
+</form>

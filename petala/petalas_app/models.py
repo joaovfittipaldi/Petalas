@@ -14,3 +14,10 @@ class Crianca(models.Model):
     turma = models.TextField(max_length=255)
     autoavaliacao = models.TextField(max_length=255)
     faltas = models.IntegerField()
+
+class Doacao(models.Model):
+    id_doacao = models.AutoField(primary_key=True)
+    nome_padrinho = models.TextField(max_length=255)
+    valor = models.IntegerField()
+    nome_crianca = models.TextField(max_length=255)
+    descricao = models.TextField(max_length=255)

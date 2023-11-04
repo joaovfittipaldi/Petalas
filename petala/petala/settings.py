@@ -24,9 +24,6 @@ TARGET_ENV = os.getenv('TARGET_ENV', 'dev')
 NOT_PROD = not TARGET_ENV.lower().startswith('prod')
 
 if NOT_PROD:
-    DEBUG = True
-    SECRET_KEY = 'django-insecure-!13#b$1dq5*&j9q%afn$#b@2$em5xi38eoar2c-gh!a_+088fo'
-    ALLOWED_HOSTS = ['petalas.azurewebsites.net', '127.0.0.1', 'localhost']
     DATABASES = {
         'default': {
             'ENGINE': 'django.db.backends.sqlite3',
@@ -55,6 +52,16 @@ else:
             'OPTIONS': {'sslmode': 'require'},
         }
     }
+
+# SECURITY WARNING: keep the secret key used in production secret!
+SECRET_KEY = 'django-insecure-cr-tpeslb8&k!!5osugw*9o=nj##4vnj$=)a+^q5p$-@+^901&'
+
+# SECURITY WARNING: don't run with debug turned on in production!
+DEBUG = True
+
+ALLOWED_HOSTS = ["petalas.azurewebsites.net", "127.0.0.1"]
+
+
 # Application definition
 
 INSTALLED_APPS = [
@@ -106,13 +113,7 @@ WSGI_APPLICATION = 'petala.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.sqlite3',
-#         'NAME': BASE_DIR / 'db.sqlite3',
-#     }
-# }
-
+AUTHENTICATION_BACKENDS = ['petalas_app.backends.CustomBackend']
 
 # Password validation
 # https://docs.djangoproject.com/en/4.2/ref/settings/#auth-password-validators

@@ -1,5 +1,5 @@
 from django.shortcuts import render, redirect
-from .models import Crianca
+from .models import Crianca, Doacao
 from django.core.exceptions import ObjectDoesNotExist
 
 # Create your views here.
@@ -44,3 +44,32 @@ def home(request):
 
 def navbar(request):
     return render(request, 'navbar.html')
+
+def listagem_doacao(request):
+    if request.method == 'POST':
+        nova_doacao = Doacao()
+        nova_doacao.nome_padrinho = request.POST.get('nome_padrinho')
+        nova_doacao.valor = request.POST.get('valor')
+        nova_doacao.nome_crianca = request.POST.get('nome_crianca')
+        nova_doacao.descricao = request.POST.get('descricao')
+        nova_doacao.save()
+
+    try:
+        context = {
+            'doacoes': Doacao.objects.all()
+        }
+
+        return render(request, 'doacoes.html', context)
+    except ObjectDoesNotExist:
+        context['error'] = "Erro ao recuperar doações do banco de dados."
+        return render(request, 'doacoes.html', context)
+        
+
+def cadastro_doacao(request):
+    return render(request, 'cadastro_doacao.html')
+        
+def info_doacao(request, doacao_id):
+    doacao =  Doacao.objects.get(id_doacao=doacao_id)
+    context = {'doacao': doacao}
+    return render(request, 'info_doacao.html', context)
+

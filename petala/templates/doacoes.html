@@ -34,19 +34,19 @@
   <div class="container"> <br>
     <div class="d-flex justify-content-between py-3">
       <a href="/" class="btn custom-btn titulo-site">VOLTAR</a>
-      <a href="/cadastro_crianca/" class="btn custom-btn titulo-site">REGISTRAR NOVA CRIANÇA</a>
+      <a href="/cadastro_doacao/" class="btn custom-btn titulo-site">REGISTRAR NOVA DOAÇÃO</a>
     </div>
 
     <br> <br>
 
     <div class="row">
-      {% if criancas %}
-        {% for crianca in criancas %}
+      {% if doacoes %}
+        {% for doacao in doacoes %}
           <div class="col-md-6 justify-content-between">
             <div class="child-card">
-              <a href="{% url 'info_crianca' crianca.id_crianca %}" class="child-image"> </a>
+              <a href="{% url 'info_doacao' doacao.id_doacao %}" class="child-image"> </a>
               <div class="custom-name texto-site"> 
-                {{crianca.nome|title}}
+                {{doacao.nome_padrinho|title}}
               </div>
             </div>
             <br>
@@ -54,7 +54,7 @@
         {% endfor %}
     </div> 
       {% else %}
-      <h1> NÃO HÁ CRIANÇAS REGISTRADAS </h1>
+      <h1> NÃO HÁ DOAÇÕES REGISTRADAS </h1>
       {% endif %}
   </div>
 

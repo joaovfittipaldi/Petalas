@@ -1,0 +1,19 @@
+{% include "navbar.html" %}
+
+<div class="container"> <br>
+  <div class="d-flex justify-content-between py-3">
+    <a href="/doacoes/" class="btn custom-btn titulo-site">VOLTAR</a>
+  </div>
+  <div class="container mt-2 d-flex align-items-center justify-content-center"> 
+    <div class="card col-lg-5">
+      <div class="card-body">
+        <h5 class="titulo-site text-center" style="color: #bf9000; font-size: x-large">{{doacao.nome_padrinho}}</h5> <br>
+        <p>ID: {{doacao.id_doacao}}</p>
+        <p>Criança Apadrinhada: {{doacao.nome_crianca}}</p>
+        <p>Valor: {{doacao.valor}}</p>
+        <p>Descrição: {{doacao.descricao}}</p>
+      </div>
+    </div>
+</div>
+</div>
+
