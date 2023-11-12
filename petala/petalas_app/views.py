@@ -4,11 +4,13 @@ from django.core.exceptions import ObjectDoesNotExist
 
 # Create your views here.
 
-def cadastro_crianca(request):
-    return render(request, 'cadastro_crianca.html')
-
-def listagem_crianca(request):
-    if request.method == "POST":
+def cadastro_crianca(request, turma_atual):
+    if request.method == "GET":
+        context = {
+            'turma' : turma_atual
+        }
+        return render(request, 'cadastro_crianca.html', context)
+    else:
         nova_crianca = Crianca()
         nova_crianca.nome = request.POST.get('nome')
         nova_crianca.idade = request.POST.get('idade')
@@ -17,19 +19,29 @@ def listagem_crianca(request):
         nova_crianca.periodo = request.POST.get('periodo')
         nova_crianca.entrada = request.POST.get('entrada')
         nova_crianca.permanencia = request.POST.get('permanencia')
-        nova_crianca.turma = request.POST.get('turma')
+        nova_crianca.turma = turma_atual
         nova_crianca.autoavaliacao = request.POST.get('autoavaliacao')
         nova_crianca.faltas = request.POST.get('faltas')
         nova_crianca.save()
         
-    try:
-        context = {
-            'criancas': Crianca.objects.all()
-        }
-        return render(request, 'criancas.html', context)
-    except ObjectDoesNotExist:
-        context['error'] = "Erro ao recuperar crianças do banco de dados."
-        return render(request, 'criancas.html', context)
+        try:
+            context = {
+                'criancas': Crianca.objects.filter(turma = turma_atual),
+                'turma' : turma_atual,
+            }
+            return render(request, 'criancas.html', context)
+        except ObjectDoesNotExist:
+            context['error'] = "Erro ao recuperar crianças do banco de dados."
+            return render(request, 'criancas.html', context)
+        
+        
+
+def listagem_crianca(request, turma_atual):
+    context = {
+        'criancas' : Crianca.objects.filter(turma = turma_atual),
+        'turma' : turma_atual,
+    }
+    return render(request, 'criancas.html', context)
 
     
 
@@ -72,4 +84,11 @@ def info_doacao(request, doacao_id):
     doacao =  Doacao.objects.get(id_doacao=doacao_id)
     context = {'doacao': doacao}
     return render(request, 'info_doacao.html', context)
+
+def listagem_turmas(request):
+    turmas = ["Eu e o Mundo - Manhã", "Nós e o Mundo - Manhã", "Eu e o Mundo - Tarde", "Nós e o Mundo - Tarde"]
+    context = {
+        'turmas' : turmas,
+    }
+    return render(request, 'turmas.html', context)
 

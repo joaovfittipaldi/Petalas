@@ -1,6 +1,6 @@
 {% include "navbar.html" %}
 
-<form class="row g-3" method="post" action="{% url 'listagem_criancas' %}">
+<form class="row g-3" method="post" action="{% url 'cadastro_crianca' turma %}">
   {% csrf_token %}
   <div class="col-md-6">
     <label for="inputEmail4" class="form-label">Nome</label>
@@ -35,7 +35,7 @@
     <label for="inputZip" class="form-label">Tempo de Permanência</label>
     <input type="text" name="permanencia" class="form-control" id="inputZip" />
   </div>
-  <div class="col-md-4">
+  {% comment %} <div class="col-md-4">
     <label for="inputState" class="form-label">Turma</label>
     <select id="inputTurma" class="form-select" name="turma">
       <option selected>...</option>
@@ -44,7 +44,7 @@
       <option>Eu e o Mundo - Tarde</option>
       <option>Nós e o Mundo - Tarde</option>
     </select>
-  </div>
+  </div> {% endcomment %}
   <br />
   <div class="col-md-6">
     <label for="inputPassword4" class="form-label">Faltas</label>

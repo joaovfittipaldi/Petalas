@@ -1,40 +1,11 @@
 {% include "navbar.html" %}
 
-<style> 
-  .custom-name{
-    font-size: x-large;
-    color: #783f04;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex: 1;
-  }
-
-  .child-card {
-    background-color: #D9D9D9;
-    width: 100%;
-    padding: 22px;
-    height: 90px;
-    display: flex;
-    align-items: center;
-  }
-
-  .child-image {
-    margin-right: 15px;
-    background: #ffffff;
-    width: 70px;
-    height: 70px;
-    border: 2px;
-    padding: 3px;
-  }
-</style> 
-
 <body>
 
   <div class="container"> <br>
     <div class="d-flex justify-content-between py-3">
-      <a href="/" class="btn custom-btn titulo-site">VOLTAR</a>
-      <a href="/cadastro_crianca/" class="btn custom-btn titulo-site">REGISTRAR NOVA CRIANÇA</a>
+      <a href="/turmas/" class="btn custom-btn titulo-site">VOLTAR</a>
+      <a href="{% url 'cadastro_crianca' turma %}" class="btn custom-btn titulo-site">CADASTRAR CRIANÇA NA TURMA</a>
     </div>
 
     <br> <br>
@@ -44,9 +15,9 @@
         {% for crianca in criancas %}
           <div class="col-md-6 justify-content-between">
             <div class="child-card">
-              <a href="{% url 'info_crianca' crianca.id_crianca %}" class="child-image"> </a>
+              <div class="child-image"> </div>
               <div class="custom-name texto-site"> 
-                {{crianca.nome|title}}
+                <a href="{% url 'info_crianca' crianca.id_crianca %}" style="color: #783f04"> {{crianca.nome|title}} </a>
               </div>
             </div>
             <br>
@@ -54,7 +25,7 @@
         {% endfor %}
     </div> 
       {% else %}
-      <h1> NÃO HÁ CRIANÇAS REGISTRADAS </h1>
+      <h1> NÃO HÁ CRIANÇAS REGISTRADAS NESSA TURMA!! </h1>
       {% endif %}
   </div>
 

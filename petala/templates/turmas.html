@@ -5,28 +5,24 @@
   <div class="container"> <br>
     <div class="d-flex justify-content-between py-3">
       <a href="/" class="btn custom-btn titulo-site">VOLTAR</a>
-      <a href="/cadastro_doacao/" class="btn custom-btn titulo-site">REGISTRAR NOVA DOAÇÃO</a>
     </div>
 
     <br> <br>
 
     <div class="row">
-      {% if doacoes %}
-        {% for doacao in doacoes %}
-          <div class="col-md-6 justify-content-between">
+        {% for turma in turmas %}
+          <div class="col-md-12 justify-content-between">
             <div class="child-card">
+              {% comment %} <a href="{% url 'info_crianca' crianca.id_crianca %}" class="child-image"> </a> {% endcomment %}
               <div class="child-image"> </div>
               <div class="custom-name texto-site"> 
-                <a href="{% url 'info_doacao' doacao.id_doacao %}" style="color: #783f04"> {{doacao.nome_padrinho|title}} </a>
+                <a href= "{% url 'listagem_criancas' turma %}" style="color: #783f04"> {{turma|title}} </a>
               </div>
             </div>
             <br>
           </div>
         {% endfor %}
     </div> 
-      {% else %}
-      <h1> NÃO HÁ DOAÇÕES REGISTRADAS </h1>
-      {% endif %}
   </div>
 
 </body>
