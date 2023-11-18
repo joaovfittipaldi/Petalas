@@ -113,7 +113,7 @@
     >
   </li>
   
-<h2>Desenvolvimento</h2>
+<h2>Como utilizar a aplicação localmente</h2>
 <ol>
   <li>Instale o Python no seu computador.</li>
   <li>Abra o seu terminal.</li>
