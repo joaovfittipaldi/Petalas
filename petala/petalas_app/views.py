@@ -92,3 +92,28 @@ def listagem_turmas(request):
     }
     return render(request, 'turmas.html', context)
 
+def resultado_pesquisa(request):
+    if request.method == "GET":
+        busca = request.GET.get("pesquisa")
+
+        resultados_crianca = Crianca.objects.filter(nome__icontains=busca)
+        resultados_doacao = Doacao.objects.filter(nome_padrinho__icontains=busca)
+
+        context = {
+            'resultados_crianca': resultados_crianca,
+            'resultados_doacao': resultados_doacao,
+            'busca': busca,
+        }
+
+        return render(request, 'resultado_pesquisa.html', context)
+    
+def acesso_crianca(request, id_field):
+    id_crianca = Crianca.objects.get(id_crianca = id_field)
+    context = {'crianca': id_crianca}
+    return render(request, 'acesso_pesquisa.html', context)
+
+def acesso_doacao(request, id_field):
+    id_doacao = Doacao.objects.get(id_doacao = id_field)
+    context = {'doacao': id_doacao,}
+    return render(request, 'acesso_pesquisa.html', context)
+

@@ -146,6 +146,25 @@
       <div class="ong-title titulo-fonte-marca">PÉTALAS</div>
       <img src="{% static "img/Logo.png" %}" alt="Logo" class="custom-circle">
       <div class="cargo-text texto-fonte-marca">FULANO - CARGO</div>
+
+      <form
+          class="d-flex"
+          role="search"
+          method="GET"
+          action="{% url 'resultado_pesquisa' %}"
+        >
+          <input
+            id="busca"
+            class="form-control me-2"
+            type="search"
+            name="pesquisa"
+            placeholder="Search"
+            aria-label="Search"
+          />
+          <button id="pesquisa" class="btn btn-outline-success" type="submit">
+            Search
+          </button>
+        </form>
     </nav>
 
     <footer style="position: fixed; bottom: 0; width: 100%; padding-left: 0; padding-right: 0;">

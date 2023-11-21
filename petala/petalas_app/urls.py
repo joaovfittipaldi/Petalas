@@ -11,4 +11,7 @@ urlpatterns = [
     path('cadastro_doacao/', views.cadastro_doacao, name='cadastro_doacao'),
     path('info_doacao/<int:doacao_id>/', views.info_doacao, name='info_doacao'),
     path('doacoes/', views.listagem_doacao, name='listagem_doacoes'),
+    path('resultado_pesquisa/', views.resultado_pesquisa, name='resultado_pesquisa'),
+    path('acesso/crianca/<int:id_field>/', views.acesso_crianca, name='acesso_crianca'),
+    path('acesso/doacao/<int:id_field>/', views.acesso_doacao, name='acesso_doacao'),
 ]
