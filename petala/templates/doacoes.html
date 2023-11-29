@@ -1,14 +1,31 @@
 {% include "navbar.html" %}
 
-<body>
+<style> 
 
-  <div class="container"> <br>
-    <div class="d-flex justify-content-between py-3">
-      <a href="/" class="btn custom-btn titulo-site">VOLTAR</a>
-      <a href="/cadastro_doacao/" class="btn custom-btn titulo-site">REGISTRAR NOVA DOAÇÃO</a>
-    </div>
+  .doacoes-recentes{
+    width: 510px;
+    height: 55px;
+    flex-shrink: 0;
+    color: #336116;
+    text-align: center;
+    font-family: Kumbh Sans;
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    top: 189px;
+    left: 501px;
+  }
 
-    <br> <br>
+</style>
+
+
+
+      <div class="doacoes-recentes position-absolute"> Doações Recentes </div>
+      <a href="/"> <div class="btn voltar-btn titulo-site position-absolute">VOLTAR </div> </a>
+      {% comment %} <a href="/cadastro_doacao/" class="btn new-donate-btn titulo-site">REGISTRAR NOVA DOAÇÃO</a> {% endcomment %}
+
+    {% comment %} <br> <br>
 
     <div class="row">
       {% if doacoes %}
@@ -26,7 +43,5 @@
     </div> 
       {% else %}
       <h1> NÃO HÁ DOAÇÕES REGISTRADAS </h1>
-      {% endif %}
-  </div>
+      {% endif %} {% endcomment %}
 
-</body>

@@ -1,11 +1,68 @@
 {% include "navbar.html" %}
 
-<div class="container"> <br>
-  <div class="d-flex justify-content-between py-3">
-    <a href="{% url 'listagem_criancas' crianca.turma %}" class="btn custom-btn titulo-site">VOLTAR</a>
-    <a href="#" class="btn custom-btn titulo-site">ATIVIDADES DA CRIANÇA</a>
-  </div>
-  <div class="container mt-2 d-flex align-items-center justify-content-center"> 
+<style> 
+
+  .crianca{
+    flex-shrink: 0;
+    border-radius: 19.402px;
+    background: #336116;
+    {% comment %} width: 724px;
+    left: 400px; {% endcomment %}
+    width: 1086px;
+    left: 213px;
+    top: 250px;
+    bottom: 37px;
+  }
+
+  .dados-criancas{
+    width: 454px;
+    height: 61px;
+    flex-shrink: 0;
+    color: #336116;
+    text-align: center;
+    font-family: Kumbh Sans;
+    font-size: 49px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;;
+    top: 168px;
+    left: 519px;
+  }
+
+  .nome{
+    width: 539px;
+    height: 53.103px;
+    flex-shrink: 0;
+    color: #FFF;
+    font-family: Kumbh Sans;
+    font-size: 45px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    top: 54px;
+    left: 291px;
+  }
+
+  .idade{
+    width: 539px;
+    height: 53.103px;
+    flex-shrink: 0;
+    color: #FFF;
+    font-family: Kumbh Sans;
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    top: 121px;
+    left: 291px;
+  }
+
+</style>
+    
+    <div class="dados-criancas position-absolute"> Dados da Crianças </div>
+    <a href="{% url 'listagem_criancas' crianca.turma %}" class="btn voltar-btn titulo-site position-absolute">VOLTAR</a>
+
+  {% comment %} <div class="container mt-2 d-flex align-items-center justify-content-center position-absolute dados-crianca"> 
     <div class="card col-lg-5">
       <div class="card-body">
         <h5 class="titulo-site text-center" style="color: #bf9000; font-size: x-large">{{crianca.nome}}</h5> <br>
@@ -20,6 +77,20 @@
         <p>Autoavaliação: {{crianca.autoavaliacao}}</p>
       </div>
     </div>
-</div>
+</div> {% endcomment %}
+
+
+<div class=" position-absolute crianca"> 
+  {% comment %} <h5 class="titulo-site text-center" style="color: #bf9000; font-size: x-large">{{crianca.nome}}</h5> <br>
+  <p>ID: {{crianca.id_crianca}}</p>
+  <p>Status: {{crianca.status}}</p>
+  <p>Período: {{crianca.periodo}}</p>
+  <p>Permanência: {{crianca.permanencia}}</p>
+  <p>Turma: {{crianca.turma}}</p>
+  <p>Autoavaliação: {{crianca.autoavaliacao}}</p> {% endcomment %}
+  <div class="position-absolute nome"> {{crianca.nome|title}} </div>
+  <div class="position-absolute idade"> {{ crianca.nascimento|date:"d-m-Y" }} - {{crianca.idade}} Anos </div>
+  <div class="position-absolute idade" style="top: 166px;"> CPF: </div>
+  <div class="position-absolute idade" style="top: 211px;"> Ingressou em {{crianca.entrada|date:"d-m-Y"}}</div>
 </div>
 

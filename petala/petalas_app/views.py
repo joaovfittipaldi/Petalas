@@ -90,6 +90,10 @@ def listagem_turmas(request):
     turmas = ["Eu e o Mundo - Manhã", "Nós e o Mundo - Manhã", "Eu e o Mundo - Tarde", "Nós e o Mundo - Tarde"]
     context = {
         'turmas' : turmas,
+        'turmaA' : turmas[0],
+        'turmaB' : turmas[1],
+        'turmaC' : turmas[2],
+        'turmaD' : turmas[3],
     }
     return render(request, 'turmas.html', context)
 

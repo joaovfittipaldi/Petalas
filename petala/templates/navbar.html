@@ -4,7 +4,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>PÉTALAS</title>
+    <title>Pétalas</title>
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Rokkitt:wght@400;600;700&display=swap">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
@@ -25,7 +25,7 @@
 
       .logo-navbar{
         width: 402px;
-        height: 78px; 
+        height: 82px; 
         flex-shrink: 0; 
         padding-top: 10px;
         padding-bottom: 16px;
@@ -78,7 +78,7 @@
 
       .custom-navbar {
         width: 100%;
-        height: 100%;
+        height: 100px;
         padding: 10px 20px;
         background-color: #336116;
       }
@@ -122,48 +122,63 @@
         background-color: #fff2cc;
       }
 
-      .custom-btn{
-        {% comment %} font-size: large; {% endcomment %}
+      .voltar-btn{
+        width: 167px;
+        height: 41px;
+        flex-shrink: 0;
+        filter: drop-shadow(0px 2.9170305728912354px 2.9170305728912354px rgba(0, 0, 0, 0.25));
+        left: 222px;
+        top: 170px;
+        background-color: #F4566A;
+        color: #FFF;
+        text-align: center;
         font-family: Inter;
-        font-size: 24px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        width: 229px;
-        height: 51px;
-        flex-grow: 0;
-        border-radius: 13px;
-        background-color: #b56387;
+        font-size: 18.5px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
       }
 
       .custom-name{
-        font-size: x-large;
+        {% comment %} font-size: x-large;
         color: #783f04;
         display: flex;
         align-items: center;
         justify-content: center;
-        flex: 1;
-      }
+        flex: 1; {% endcomment %}
+        color: #FFF;
+        font-family: Kumbh Sans;
+        font-size: 33px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+        margin: auto;
+        width: 100%; /* Adjust this value as needed */
+        white-space: nowrap; /* This prevents wrapping */
+        overflow: hidden; /* Ensures content doesn't overflow */
+        text-overflow: ellipsis; 
+      }    
+      
     
       .child-card {
         border-radius: 13px;
         background-color: #336116;
         margin: 10px;
-        margin-bottom: 20px;
+        margin-bottom: 30px;
         padding: 22px;
-        width: 388px;
         height: 78px;
         display: flex;
         align-items: center;
+        width: 550px;
       }
     
       .child-image {
-        margin-right: 15px;
-        background: #ffffff;
-        width: 70px;
-        height: 70px;
-        border: 2px;
-        padding: 3px;
+        width: 72px;
+        height: 72px;
+        flex-shrink: 0;
+        fill: #FFF;
+        border-radius: 50%;
+        background-color: #fff;
       }
 
       .no-gutters > .col-4 {
@@ -225,14 +240,14 @@
         </form>{% endcomment %}
         
         <form class="d-flex search-bar" role="search" method="GET" action="{% url 'resultado_pesquisa' %}">
-          <div class="position-relative">
+          {% comment %} <div class="position-relative"> {% endcomment %}
             <input id="busca" type="search" name="pesquisa" class="form-control" placeholder="Pesquisar..." aria-label="Pesquisar..." style="border-radius: 26.5px; padding-right: 30px; width: 100%;">
-            <i class="fas fa-search position-absolute" style="right: 10px; top: 20px; transform: translateY(-50%);"></i>
-          </div>
+            {% comment %} <i class="fas fa-search position-absolute" style="right: 10px; top: 20px; transform: translateY(-50%);"></i> {% endcomment %}
+          {% comment %} </div> {% endcomment %}
       </form>
     
       
-      {% comment %} <i class="fas fa-search position-absolute" style="right: 225px; top: 45px;"></i> {% endcomment %}
+     <i class="fas fa-search position-absolute" style="right: 225px; top: 45px;"></i>
       
     </nav>
 
