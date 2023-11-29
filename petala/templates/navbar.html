@@ -4,18 +4,17 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>ONG Layout</title>
-    <link
-      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
-      rel="stylesheet"
-    />
-    <link href="https://fonts.googleapis.com/css2?family=Roboto+Serif:wght@500;600&display=swap" rel="stylesheet">
+    <title>PÉTALAS</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Rokkitt:wght@400;600;700&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
 
     <style>
       body {
-        background-color: #fff2cc;
-        color: #783f04;
+        background-color: #ffffff;
+        {% comment %} color: #783f04; {% endcomment %}
+        flex-grow: 0;
       }
 
       .titulo-fonte-marca{
@@ -24,10 +23,33 @@
         font-weight: 700;
       }
 
+      .logo-navbar{
+        width: 402px;
+        height: 78px; 
+        flex-shrink: 0; 
+        padding-top: 10px;
+        padding-bottom: 16px;
+        padding-left: 192px;
+      }
+
       .texto-fonte-marca{
-        color: #ffffff;
-        font-family: 'Rokkitt', serif;
+        {% comment %} color: #ffffff;
+        font-family: KumbhSans;
         font-weight: 400;
+        font-size: 42px; {% endcomment %}
+        width: 433px;
+        height: 27px;
+        flex-grow: 0;
+        margin: 26px 0 25px;
+        font-family: KumbhSans;
+        font-size: 42px;
+        font-weight: normal;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: normal;
+        letter-spacing: normal;
+        text-align: center;
+        color: #e9ffd6;
       }
 
       .titulo-site {
@@ -39,10 +61,6 @@
       .texto-site{
         font-family: 'Roboto Serif', Serif;
         font-weight: 500;
-      }
-
-      .navbar.custom-navbar {
-        background-image:url('{% static 'img/flor_header.png' %}')
       }
 
       .navbar-brand {
@@ -59,8 +77,12 @@
       }
 
       .custom-navbar {
+        width: 100%;
+        height: 100%;
         padding: 10px 20px;
+        background-color: #336116;
       }
+      
       .ong-title {
         font-size: 28px;
         font-size: xx-large;
@@ -70,9 +92,6 @@
       .custom-circle {
         width: 80px;
         height: 80px;
-        width: 80px;
-        height: 80px;
-        border-radius: 50%;
         margin: -10px 20px;
       }
       .cargo-text {
@@ -86,12 +105,17 @@
         font-weight: 500;
       }
 
-      .button-customize {
-        justify-content: space-between;
+      .button-customize { 
+        display: flex;
         align-items: center;
-        width: 25%;
-        height: 70px;
-        font-size: xx-large;
+        justify-content: center;
+        text-align: center;
+        width: 349.8px;
+        height: 78px;
+        flex-grow: 0;
+        margin: 0 42px 0 41.2px;
+        border-radius: 13px;
+        background-color: #336116;
       }
 
       .card{
@@ -99,7 +123,17 @@
       }
 
       .custom-btn{
-        font-size: large;
+        {% comment %} font-size: large; {% endcomment %}
+        font-family: Inter;
+        font-size: 24px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 229px;
+        height: 51px;
+        flex-grow: 0;
+        border-radius: 13px;
+        background-color: #b56387;
       }
 
       .custom-name{
@@ -112,10 +146,13 @@
       }
     
       .child-card {
-        background-color: #D9D9D9;
-        width: 100%;
+        border-radius: 13px;
+        background-color: #336116;
+        margin: 10px;
+        margin-bottom: 20px;
         padding: 22px;
-        height: 90px;
+        width: 388px;
+        height: 78px;
         display: flex;
         align-items: center;
       }
@@ -139,49 +176,75 @@
         display: block;
       }
 
+      .background-image-inferior {
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        height: 100%;
+        background-position: left bottom;
+        background-repeat: no-repeat;
+        background-size: contain; /* or 'cover' depending on how you want to display it */
+        z-index: -1; /* Ensures the image stays behind other content */
+      }
+
+      .background-image-superior {
+        position: fixed;
+        right: 0;
+        top: 98px;
+        width: 100%;
+        height: 100%;
+        background-position: left bottom;
+        background-repeat: no-repeat;
+        background-size: contain; /* or 'cover' depending on how you want to display it */
+        z-index: -1; /* Ensures the image stays behind other content */
+      }
+      
+      .search-bar{
+        width: 552px; 
+        height: 53px; 
+        flex-shrink: 0; 
+        padding-top: 10px;
+        padding-bottom: 26px;
+        padding-right: 192px;
+      }
+
     </style>
+    
   </head>
   <body>
     <nav class="navbar custom-navbar d-flex justify-content-between">
-      <div class="ong-title titulo-fonte-marca">PÉTALAS</div>
-      <img src="{% static "img/Logo.png" %}" alt="Logo" class="custom-circle">
-      <div class="cargo-text texto-fonte-marca">FULANO - CARGO</div>
+      <img class="logo-navbar" src="{% static "img/logo_petalas.png" %}" alt="Logo" class="custom-circle">
+      {% comment %} <div class="cargo-text texto-fonte-marca">FULANO - CARGO</div> {% endcomment %}
 
-      <form
-          class="d-flex"
-          role="search"
-          method="GET"
-          action="{% url 'resultado_pesquisa' %}"
-        >
-          <input
-            id="busca"
-            class="form-control me-2"
-            type="search"
-            name="pesquisa"
-            placeholder="Search"
-            aria-label="Search"
-          />
-          <button id="pesquisa" class="btn btn-outline-success" type="submit">
+      {% comment %}<form class="d-flex search-bar" role="search" method="GET" action="{% url 'resultado_pesquisa' %}">
+          <input id="busca" class="form-control me-2" type="search" name="pesquisa" placeholder="Pesquisar..." aria-label="Pesquisar..." style="border-radius: 26.5px;">
+            <button id="pesquisa" class="btn btn-outline-success" type="submit">
             Search
-          </button>
-        </form>
+          </button>  
+        </form>{% endcomment %}
+        
+        <form class="d-flex search-bar" role="search" method="GET" action="{% url 'resultado_pesquisa' %}">
+          <div class="position-relative">
+            <input id="busca" type="search" name="pesquisa" class="form-control" placeholder="Pesquisar..." aria-label="Pesquisar..." style="border-radius: 26.5px; padding-right: 30px; width: 100%;">
+            <i class="fas fa-search position-absolute" style="right: 10px; top: 20px; transform: translateY(-50%);"></i>
+          </div>
+      </form>
+    
+      
+      {% comment %} <i class="fas fa-search position-absolute" style="right: 225px; top: 45px;"></i> {% endcomment %}
+      
     </nav>
 
-    <footer style="position: fixed; bottom: 0; width: 100%; padding-left: 0; padding-right: 0;">
+    <div class="background-image-superior" style="background-image: url('{% static 'img/petalas_background1.png' %}'); width: 157px; height: 286px;"></div>
+    <div class="background-image-inferior" style="background-image: url('{% static 'img/petalas_background.png' %}'); width: 157px; height: 286px;"></div>
+    {% comment %} <footer style="position: fixed; bottom: 0; width: 100%; padding-left: 0; padding-right: 0;">
       <div class="row no-gutters">
         <div class="col-4"> <img src="{% static 'img/flores_sem_fundo_updated.png' %}" alt="Rodapé"> </div>
         <div class="col-4"> <img src="{% static 'img/flores_sem_fundo_updated.png' %}" alt="Rodapé"> </div>
         <div class="col-4"> <img src="{% static 'img/flores_sem_fundo_updated.png' %}" alt="Rodapé"> </div>
       </div>
-    </footer>
-
-    <footer style="position: fixed; bottom: 0; width: 100%; padding-left: 0; padding-right: 0;">
-      <div class="row no-gutters">
-        <div class="col-4"> <img src="{% static 'img/flores_sem_fundo_updated.png' %}" alt="Rodapé"> </div>
-        <div class="col-4"> <img src="{% static 'img/flores_sem_fundo_updated.png' %}" alt="Rodapé"> </div>
-        <div class="col-4"> <img src="{% static 'img/flores_sem_fundo_updated.png' %}" alt="Rodapé"> </div>
-      </div>
-    </footer>
+    </footer> {% endcomment %}
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>

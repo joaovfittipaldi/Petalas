@@ -8,15 +8,13 @@
     </div>
 
     <br> <br>
-
+  
     <div class="row">
         {% for turma in turmas %}
-          <div class="col-md-12 justify-content-between">
+          <div class="col-md-6 justify-content-between">
             <div class="child-card">
-              {% comment %} <a href="{% url 'info_crianca' crianca.id_crianca %}" class="child-image"> </a> {% endcomment %}
-              <div class="child-image"> </div>
-              <div class="custom-name texto-site"> 
-                <a href= "{% url 'listagem_criancas' turma %}" style="color: #783f04"> {{turma|title}} </a>
+              <div class="custom-name"  style="text-align: center"> 
+                <a href= "{% url 'listagem_criancas' turma %}" class="texto-fonte-marca" style="font-size: 30px"> {{turma|title}} </a>
               </div>
             </div>
             <br>
