@@ -6,6 +6,7 @@
     <div class="d-flex justify-content-between py-3">
       <a href="/turmas/" class="btn custom-btn titulo-site">VOLTAR</a>
       <a href="{% url 'cadastro_crianca' turma %}" class="btn custom-btn titulo-site">CADASTRAR CRIANÇA NA TURMA</a>
+      <a href="{% url 'listagem_presencas' turma_atual=turma %}" class="btn custom-btn">Ver Lista de Presença</a>
     </div>
 
     <br> <br>

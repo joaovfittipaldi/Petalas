@@ -1,5 +1,6 @@
 from django.shortcuts import render, redirect
-from .models import Crianca, Doacao
+from django.urls import reverse
+from .models import Crianca, Doacao, Presenca
 from django.core.exceptions import ObjectDoesNotExist
 
 # Create your views here.
@@ -21,7 +22,6 @@ def cadastro_crianca(request, turma_atual):
         nova_crianca.permanencia = request.POST.get('permanencia')
         nova_crianca.turma = turma_atual
         nova_crianca.autoavaliacao = request.POST.get('autoavaliacao')
-        nova_crianca.faltas = request.POST.get('faltas')
         nova_crianca.save()
         
         try:
@@ -62,6 +62,7 @@ def listagem_doacao(request):
         nova_doacao = Doacao()
         nova_doacao.nome_padrinho = request.POST.get('nome_padrinho')
         nova_doacao.valor = request.POST.get('valor')
+        nova_doacao.cpf = request.POST.get('cpf')
         nova_doacao.nome_crianca = request.POST.get('nome_crianca')
         nova_doacao.descricao = request.POST.get('descricao')
         nova_doacao.save()
@@ -117,3 +118,50 @@ def acesso_doacao(request, id_field):
     context = {'doacao': id_doacao,}
     return render(request, 'acesso_pesquisa.html', context)
 
+
+def cadastro_presenca(request, turma_atual):
+    if request.method == "GET":
+        criancas = Crianca.objects.filter(turma=turma_atual)
+        context = {
+            'turma' : turma_atual,
+            'criancas': criancas,
+        }
+        return render(request, 'cadastro_presenca.html', context)
+    else:
+        data = request.POST.get('data')
+        criancas_presentes = request.POST.getlist('criancas_presentes')
+
+        for crianca_id in criancas_presentes:
+            crianca = Crianca.objects.get(id_crianca=crianca_id)
+            nova_presenca = Presenca(
+                data=data,
+                turma=turma_atual,
+                crianca=crianca,
+                presente=True 
+            )
+            nova_presenca.save()
+        
+        try:
+            context = {
+                'presencas': Presenca.objects.filter(turma = turma_atual),
+                'turma' : turma_atual,
+            }
+            return render(request, 'presencas.html', context)
+        except ObjectDoesNotExist:
+            context['error'] = "Erro ao recuperar lista de presença do banco de dados."
+            return render(request, 'presencas.html', context)
+
+
+def listagem_presenca(request, turma_atual):
+    context = {
+        'presencas' : Presenca.objects.filter(turma = turma_atual),
+        'turma' : turma_atual,
+        'turma_url': reverse('listagem_criancas', kwargs={'turma_atual': turma_atual}),
+    }
+    return render(request, 'presencas.html', context)
+
+
+def info_presenca(request, presenca_id):
+    presenca =  Presenca.objects.get(id_presenca=presenca_id)
+    context = {'presenca': presenca}
+    return render(request, 'info_presenca.html', context)

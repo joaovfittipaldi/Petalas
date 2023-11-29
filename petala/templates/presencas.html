@@ -1,0 +1,32 @@
+{% include "navbar.html" %}
+
+<body>
+
+  <div class="container"> <br>
+    <div class="d-flex justify-content-between py-3">
+        <a href="{{ turma_url }}" class="btn custom-btn titulo-site">VOLTAR</a>
+      <a href="{% url 'cadastro_presenca' turma_atual=turma %}" class="btn custom-btn titulo-site">CADASTRAR NOVO DIA</a>
+    </div>
+
+    <br> <br>
+
+    <div class="row">
+      {% if presencas %}
+        {% for presenca in presencas %}
+          <div class="col-md-6 justify-content-between">
+            <div class="child-card">
+              <div class="child-image"> </div>
+              <div class="custom-name texto-site"> 
+                <a href="{% url 'info_presenca' presenca.id_presenca %}" style="color: #783f04"> {{presenca.data|title}} </a>
+              </div>
+            </div>
+            <br>
+          </div>
+        {% endfor %}
+    </div> 
+      {% else %}
+      <h1> NÃO HÁ PRESENÇAS REGISTRADAS NESSA TURMA!! </h1>
+      {% endif %}
+  </div>
+
+</body>

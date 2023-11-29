@@ -1,0 +1,31 @@
+{% include "navbar.html" %}
+
+<div class="container"> <br>
+  <div class="d-flex justify-content-between py-3">
+    <a href="/presencas/" class="btn custom-btn titulo-site">VOLTAR</a>
+  </div>
+  <div class="container mt-2 d-flex align-items-center justify-content-center"> 
+    <div class="card col-lg-5">
+      <div class="card-body">
+        <h5 class="titulo-site text-center" style="color: #bf9000; font-size: x-large">{{presenca.data}}</h5> <br>
+        <p>Turma: {{presenca.turma}}</p>
+        <p>Presentes:</p>
+        <ul>
+          {% for crianca in presenca.presentes.all %}
+            <li>{{ crianca.nome }}</li>
+          {% endfor %}
+        </ul>
+        
+        <p>Faltantes:</p>
+        <ul>
+          {% for crianca in presenca.turma.criancas.all %}
+            {% if crianca not in presenca.presentes.all %}
+              <li>{{ crianca.nome }}</li>
+            {% endif %}
+          {% endfor %}
+        </ul>
+      </div>
+    </div>
+</div>
+</div>
+
