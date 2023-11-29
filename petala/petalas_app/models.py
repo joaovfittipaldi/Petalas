@@ -26,5 +26,5 @@ class Presenca(models.Model):
     id_presenca = models.AutoField(primary_key=True)
     data = models.DateField()
     turma = models.TextField(max_length=255)
-    crianca = models.ForeignKey(Crianca, on_delete=models.CASCADE)
+    crianca_nome = models.TextField()
     presentes = models.BooleanField(default=False)
