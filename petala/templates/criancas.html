@@ -5,7 +5,7 @@
   <div class="container"> <br>
     <div class="d-flex justify-content-between py-3">
       <a href="/turmas/" class="btn custom-btn titulo-site">VOLTAR</a>
-      <a href="{% url 'cadastro_crianca' turma %}" class="btn custom-btn titulo-site">CADASTRAR CRIANÇA NA TURMA</a>
+      <a href="{% url 'cadastro_crianca' turma %}" class="btn custom-btn titulo-site" id="cadastro_crianca">CADASTRAR CRIANÇA NA TURMA</a>
       <a href="{% url 'listagem_presencas' turma_atual=turma %}" class="btn custom-btn">Ver Lista de Presença</a>
     </div>
 
@@ -18,7 +18,7 @@
             <div class="child-card">
               <div class="child-image"> </div>
               <div class="custom-name texto-site"> 
-                <a href="{% url 'info_crianca' crianca.id_crianca %}" style="color: #783f04"> {{crianca.nome|title}} </a>
+                <a href="{% url 'info_crianca' crianca.id_crianca %}" style="color: #783f04" id="acessa_crianca"> {{crianca.nome|title}} </a>
               </div>
             </div>
             <br>

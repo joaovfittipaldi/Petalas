@@ -5,7 +5,7 @@
   <div class="container"> <br>
     <div class="d-flex justify-content-between py-3">
       <a href="/" class="btn custom-btn titulo-site">VOLTAR</a>
-      <a href="/cadastro_doacao/" class="btn custom-btn titulo-site">REGISTRAR NOVA DOAÇÃO</a>
+      <a href="/cadastro_doacao/" class="btn custom-btn titulo-site" id="nova_doacao">REGISTRAR NOVA DOAÇÃO</a>
     </div>
 
     <br> <br>
@@ -17,7 +17,7 @@
             <div class="child-card">
               <div class="child-image"> </div>
               <div class="custom-name texto-site"> 
-                <a href="{% url 'info_doacao' doacao.id_doacao %}" style="color: #783f04"> {{doacao.nome_padrinho|title}} </a>
+                <a href="{% url 'info_doacao' doacao.id_doacao %}" style="color: #783f04" id="info_doacao"> {{doacao.nome_padrinho|title}} </a>
               </div>
             </div>
             <br>

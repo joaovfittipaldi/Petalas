@@ -1,26 +1,33 @@
 {% include "navbar.html" %}
 
 <body>
-
-  <div class="container"> <br>
+  <div class="container">
+    <br />
     <div class="d-flex justify-content-between py-3">
       <a href="/" class="btn custom-btn titulo-site">VOLTAR</a>
     </div>
 
-    <br> <br>
-  
-    <div class="row">
-        {% for turma in turmas %}
-          <div class="col-md-6 justify-content-between">
-            <div class="child-card">
-              <div class="custom-name"  style="text-align: center"> 
-                <a href= "{% url 'listagem_criancas' turma %}" class="texto-fonte-marca" style="font-size: 30px"> {{turma|title}} </a>
-              </div>
-            </div>
-            <br>
-          </div>
-        {% endfor %}
-    </div> 
-  </div>
+    <br />
+    <br />
 
+    <div class="row">
+      {% for turma in turmas %}
+      <div class="col-md-6 justify-content-between">
+        <div class="child-card">
+          <div class="custom-name" style="text-align: center">
+            <a
+              href="{% url 'listagem_criancas' turma %}"
+              class="texto-fonte-marca"
+              style="font-size: 30px"
+              id="acessa_turma"
+            >
+              {{turma|title}}
+            </a>
+          </div>
+        </div>
+        <br />
+      </div>
+      {% endfor %}
+    </div>
+  </div>
 </body>
