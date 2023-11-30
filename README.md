@@ -138,6 +138,12 @@
    </li>
    <li>
     <a
+      href="https://drive.google.com/file/d/1asK29KsWdI-T6WRMaoAlRuOsAP9Ob6ij/view?usp=drive_link"
+      >ScreenCast do Protótipo</a
+    >
+   </li>
+   <li>
+    <a
       href="https://drive.google.com/file/d/1StIghtunsVu4lxjkGWZ_Sc63GbpD9H2F/view?usp=sharing"
       >Issue/Bug Tracker</a
     >
