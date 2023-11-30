@@ -1,5 +1,11 @@
 {% include "navbar.html" %}
 
+<style> 
+  body{
+    overflow-x: hidden;
+  }
+</style>
+
 <form
   class="row g-3"
   method="post"
@@ -11,7 +17,7 @@
     <input type="date" name="data" class="form-control" id="inputData" />
   </div>
   {% for crianca in criancas %}
-  <div class="col-md-6">
+  <div class="col-md-12">
     <div class="form-check">
       <input
         class="form-check-input"
@@ -33,8 +39,9 @@
   <br />
   <br />
   <div class="col-12">
-    <button id="cadastro_dia" type="submit" class="btn btn-primary">
+    <button id="cadastro_dia" type="submit" class="btn voltar-btn btn-primary" style="border: 0px;">
       Cadastrar
     </button>
+    <a href="{% url 'listagem_presencas' turma %}"> <div class="btn voltar-btn"> Cancelar </div> </a>
   </div>
 </form>
