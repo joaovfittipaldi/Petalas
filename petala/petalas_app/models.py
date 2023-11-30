@@ -19,8 +19,8 @@ class Doacao(models.Model):
     nome_padrinho = models.TextField(max_length=255)
     cpf = models.IntegerField()
     valor = models.IntegerField()
-    nome_crianca = models.TextField(max_length=255)
-    descricao = models.TextField(max_length=255)
+    destino = models.TextField(max_length=255)
+    tipo= models.TextField(max_length=255)
 
 class Presenca(models.Model):
     id_presenca = models.AutoField(primary_key=True)

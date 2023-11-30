@@ -63,8 +63,8 @@ def listagem_doacao(request):
         nova_doacao.nome_padrinho = request.POST.get('nome_padrinho')
         nova_doacao.valor = request.POST.get('valor')
         nova_doacao.cpf = request.POST.get('cpf')
-        nova_doacao.nome_crianca = request.POST.get('nome_crianca')
-        nova_doacao.descricao = request.POST.get('descricao')
+        nova_doacao.destino = request.POST.get('nome_crianca')
+        nova_doacao.tipo = request.POST.get('descricao')
         nova_doacao.save()
 
     try:
