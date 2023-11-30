@@ -1,0 +1,37 @@
+{% include "navbar.html" %}
+
+<style>
+  .turmas-btn {
+    width: 388px;
+    height: 78px;
+    flex-shrink: 0;
+    border-radius: 13px;
+    background: #336116;
+  }
+
+  .selecionar-turma {
+    width: 510px;
+    height: 55px;
+    flex-shrink: 0;
+    color: #336116;
+    text-align: center;
+    font-family: Kumbh Sans;
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    top: 189px;
+    left: 501px;
+  }
+</style>
+
+<div class="selecionar-turma position-absolute">Selecionar Turma</div>
+<a href="/">
+  <div class="btn voltar-btn titulo-site position-absolute">VOLTAR</div>
+</a>
+
+
+<a href= "{% url 'listagem_criancas' turmaA %}" id="acessa_turma"> <div class="btn turmas-btn position-absolute texto-fonte-marca" style="top: 350px; left: 287px; font-size: 30px; padding-top: 20px;"> {{turmaA|title}} </div> </a>
+<a href= "{% url 'listagem_criancas' turmaB %}"> <div class="btn turmas-btn position-absolute texto-fonte-marca" style="top: 350px; right: 287px; font-size: 30px; padding-top: 20px;"> {{turmaB|title}} </div> </a>
+<a href= "{% url 'listagem_criancas' turmaC%}"> <div class="btn turmas-btn position-absolute texto-fonte-marca" style="top: 491px; left: 287px; font-size: 30px; padding-top: 20px;"> {{turmaC|title}} </div> </a>
+<a href= "{% url 'listagem_criancas' turmaD %}"> <div class="btn turmas-btn position-absolute texto-fonte-marca" style="top: 491px; right: 287px; font-size: 30px; padding-top: 20px;"> {{turmaC|title}} </div> </a>

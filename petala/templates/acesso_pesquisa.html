@@ -1,0 +1,41 @@
+{% include "navbar.html" %}
+
+{% if crianca %}
+<div class="container"> <br>
+  <div class="container mt-2 d-flex align-items-center justify-content-center"> 
+    <div class="card col-lg-5">
+      <div class="card-body">
+        <h5 class="titulo-site text-center" style="color: #bf9000; font-size: x-large">{{crianca.nome}}</h5> <br>
+        <p>ID: {{crianca.id_crianca}}</p>
+        <p>Idade: {{crianca.idade}}</p>
+        <p>Nascimento: {{ crianca.nascimento|date:"d-m-Y" }}</p>
+        <p>Status: {{crianca.status}}</p>
+        <p>Período: {{crianca.periodo}}</p>
+        <p>Entrada: {{crianca.entrada|date:"d-m-Y"}}</p>
+        <p>Permanência: {{crianca.permanencia}}</p>
+        <p>Turma: {{crianca.turma}}</p>
+        <p>Autoavaliação: {{crianca.autoavaliacao}}</p>
+      </div>
+    </div>
+</div>
+</div>
+
+{% elif doacao %}
+
+<div class="container"> <br>
+  <div class="container mt-2 d-flex align-items-center justify-content-center"> 
+    <div class="card col-lg-5">
+      <div class="card-body">
+        <h5 class="titulo-site text-center" style="color: #bf9000; font-size: x-large">{{doacao.nome_padrinho}}</h5> <br>
+        <p>ID: {{doacao.id_doacao}}</p>
+        <p>CPF: {{doacao.cpf}}</p>
+        <p>Criança Apadrinhada: {{doacao.nome_crianca}}</p>
+        <p>Valor: {{doacao.valor}}</p>
+        <p>Descrição: {{doacao.descricao}}</p>
+      </div>
+    </div>
+</div>
+</div>
+{% else %}
+    <p> INFORMAÇÃO NÃO DISPONÍVEL </p>
+{% endif %}

@@ -1,42 +1,42 @@
 {% include "navbar.html" %}
 
-<form class="row g-3" method="post" action="{% url 'listagem_criancas' %}">
+<form class="row g-3" method="post" action="{% url 'cadastro_crianca' turma %}">
   {% csrf_token %}
   <div class="col-md-6">
-    <label for="inputEmail4" class="form-label">Nome</label>
-    <input type="text" name="nome" class="form-control" id="inputNome" />
+    <label for="nome" class="form-label">Nome</label>
+    <input type="text" name="nome" class="form-control" id="nome" />
   </div>
   <div class="col-md-6">
-    <label for="inputPassword4" class="form-label">Idade</label>
-    <input type="number" name="idade" class="form-control" id="inputIdade" />
+    <label for="idade" class="form-label">Idade</label>
+    <input type="number" name="idade" class="form-control" id="idade" />
   </div>
   <div class="col-md-6">
-    <label for="idade" class="form-label">Nascimento</label>
+    <label for="nascimento" class="form-label">Nascimento</label>
     <input
       type="date"
       name="nascimento"
       class="form-control"
-      id="inputNascimento"
+      id="nascimento"
     />
   </div>
   <div class="col-md-4">
-    <label for="inputState" class="form-label">Período</label>
-    <select id="inputPeriodo" class="form-select" name="periodo">
+    <label for="periodo" class="form-label" id="selecionar_periodo">Período</label>
+    <select id="periodo" class="form-select" name="periodo">
       <option selected>...</option>
       <option>Manhã</option>
       <option>Tarde</option>
     </select>
   </div>
   <div class="col-md-6">
-    <label for="inputCity" class="form-label">Data de Entrada</label>
-    <input type="date" name="entrada" class="form-control" id="inputCity" />
+    <label for="data_entrada" class="form-label">Data de Entrada</label>
+    <input type="date" name="entrada" class="form-control" id="data_entrada" />
   </div>
   <div class="col-md-2">
-    <label for="inputZip" class="form-label">Tempo de Permanência</label>
-    <input type="text" name="permanencia" class="form-control" id="inputZip" />
+    <label for="tempo_permanencia" class="form-label">Tempo de Permanência</label>
+    <input type="text" name="permanencia" class="form-control" id="tempo_permanencia" />
   </div>
-  <div class="col-md-4">
-    <label for="inputState" class="form-label">Turma</label>
+  {% comment %} <div class="col-md-4">
+    <label for="inputState" class="form-label" id="""t">Turma</label>
     <select id="inputTurma" class="form-select" name="turma">
       <option selected>...</option>
       <option>Eu e o Mundo - Manhã</option>
@@ -44,15 +44,11 @@
       <option>Eu e o Mundo - Tarde</option>
       <option>Nós e o Mundo - Tarde</option>
     </select>
-  </div>
+  </div> {% endcomment %}
   <br />
-  <div class="col-md-6">
-    <label for="inputPassword4" class="form-label">Faltas</label>
-    <input type="number" name="faltas" class="form-control" id="inputFaltas" />
-  </div>
   <div class="col-md-4">
-    <label for="inputState" class="form-label">Autoavaliação</label>
-    <select id="inputAutoavaliacao" class="form-select" name="autoavaliacao">
+    <label for="autoavaliacao" class="form-label">Autoavaliação</label>
+    <select id="autoavaliacao" class="form-select" name="autoavaliacao">
       <option selected>...</option>
       <option>Verde</option>
       <option>Amarelo</option>
@@ -60,13 +56,13 @@
     </select>
   </div>
   <div class="col-md-6">
-    <label for="inputPassword4" class="form-label">Status</label>
-    <input type="text" name="status" class="form-control" id="inputStatus" />
+    <label for="status" class="form-label">Status</label>
+    <input type="text" name="status" class="form-control" id="status" />
   </div>
   <br />
   <br />
   <br />
   <div class="col-12">
-    <button type="submit" class="btn btn-primary">Cadastrar</button>
+    <button id='botao_cadastrar_crianca' type="submit" class="btn btn-primary">Cadastrar</button>
   </div>
 </form>

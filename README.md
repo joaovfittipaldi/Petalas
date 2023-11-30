@@ -97,7 +97,29 @@
     >
   </li>
 </ul>
-<h2>Desenvolvimento</h2>
+
+<p>Status Report 2 (SR2)</p>
+<ul>
+  <li>
+    <a
+      href="https://docs.google.com/document/d/1iQNB5QMGJxw8iCMjCIQ4oLCSGe9qLoX5X6_qNVmZIcw/edit?usp=drive_link"
+      >Histórias do usuário</a
+    >
+  </li>
+  <li>
+    <a
+      href="https://docs.google.com/document/d/12WzarDKRioVPRG49SQ_295nON9rk74GDR3W6Ke5bvbA/edit"
+      >Programação em Par</a
+    >
+  </li>
+  <li>
+    <a
+      href="https://drive.google.com/file/d/1cscw2HxrJvH8hKqrHuIAI_8h0LYtzsJ3/view?usp=drive_link"
+      >Diagrama de Atividades</a
+    >
+  </li>
+  
+<h2>Como utilizar a aplicação localmente</h2>
 <ol>
   <li>Instale o Python no seu computador.</li>
   <li>Abra o seu terminal.</li>

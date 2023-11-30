@@ -1,61 +1,78 @@
 {% include "navbar.html" %}
 
 <style> 
-  .custom-name{
-    font-size: x-large;
-    color: #783f04;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex: 1;
+
+  .criancas{
+    width: 510px;
+    height: 55px;
+    flex-shrink: 0;
+    color: #336116;
+    text-align: center;
+    font-family: Kumbh Sans;
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    top: 189px;
+    left: 501px;
   }
 
-  .child-card {
-    background-color: #D9D9D9;
-    width: 100%;
-    padding: 22px;
-    height: 90px;
-    display: flex;
-    align-items: center;
+  .registrar-crianca{
+    width: 296px;
+    height: 48px;
+    flex-shrink: 0;
+    color: #336116;
+    text-align: center;
+    font-family: Kumbh Sans;
+    font-size: 31px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    top: 244px;
+    right: 244px;
   }
 
-  .child-image {
-    margin-right: 15px;
-    background: #ffffff;
-    width: 70px;
-    height: 70px;
-    border: 2px;
-    padding: 3px;
+  .child-list{
+    flex-shrink: 0;
+    border-radius: 19.402px;
+    background: #336116;
+    left: 213px;
+    top: 292px;
   }
-</style> 
 
-<body>
+  hr{
+    width: 920px;
+    height: 0px;
+    flex-shrink: 0;
+    stroke-width: 2px;
+    stroke: #FFF;
+    background-color: #FFFFFF;
+  }
 
-  <div class="container"> <br>
-    <div class="d-flex justify-content-between py-3">
-      <a href="/" class="btn custom-btn titulo-site">VOLTAR</a>
-      <a href="/cadastro_crianca/" class="btn custom-btn titulo-site">REGISTRAR NOVA CRIANÇA</a>
-    </div>
+  
 
-    <br> <br>
+</style>
 
-    <div class="row">
-      {% if crianca %}
+
+      <a href="/turmas/"> <div class="btn voltar-btn titulo-site position-absolute">VOLTAR </div> </a>
+      <div class="criancas position-absolute"> Crianças </div>
+      <a href="{% url 'cadastro_crianca' turma %}" > <div class="registrar-crianca position-absolute" id="registrar_crianca"> +Registrar Criança </div> <a>
+      <a id="lista_presenca" href="{% url 'listagem_presencas' turma_atual=turma %}"> <div class="registrar-crianca position-absolute" style="left: 222px;"> +Ver Lista de Presença </div> </a>
+
+ <div class="container child-list position-absolute">
+      {% if criancas %}
         {% for crianca in criancas %}
-          <div class="col-md-6 justify-content-between">
-            <div class="child-card">
-              <a href="{% url 'info_crianca' crianca.id_crianca %}" class="child-image"> </a>
-              <div class="custom-name texto-site"> 
-                {{crianca.nome|title}}
+
+           <div class="child-card">
+              <div style="padding-left: 71px; padding-top: 37px;"> <div class="child-image"> </div> </div>
+              <div class="custom-name" style="padding-left: 10px;"> 
+                <a href="{% url 'info_crianca' crianca.id_crianca %}" style="color: #ffffff;" id="acessa_crianca"> {{crianca.nome|title}} </a>
               </div>
             </div>
-            <br>
-          </div>
+            <hr>
+
         {% endfor %}
-    </div> 
       {% else %}
-      <h1> NÃO HÁ CRIANÇAS REGISTRADAS </h1>
+      <h1> NÃO HÁ CRIANÇAS REGISTRADAS NESSA TURMA!! </h1>
       {% endif %}
   </div>
-
-</body>

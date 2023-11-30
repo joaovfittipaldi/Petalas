@@ -1,0 +1,35 @@
+{% include "navbar.html" %}
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-6 d-flex flex-column align-items-center">
+            {% if resultados_crianca %}
+            <h2 class="text-center"> CRIANÇAS </h2> <hr>
+            {% for crianca in resultados_crianca %}
+            <div class="custom-card my-2">
+                <img class="custom-img" src="http://avatars.dicebear.com/api/open-peeps/stefan.svg">
+                <a href="{% url "acesso_crianca" crianca.id_crianca %}" id = "crianca_encontrada" class="custom-name" style="color: #000000"> {{ crianca.nome }} </a>
+            </div>
+            <br>
+            {% endfor %}
+            {% else %} 
+            <h2 class="text-center"> CRIANÇA NÃO ENCONTRADA!! </h2>
+            {% endif %}
+        </div>
+
+        <div class="col-md-6 d-flex flex-column align-items-center">
+            {% if resultados_doacao %}
+            <h2 class="text-center"> DOAÇÕES </h2> <hr>
+            {% for doacao in resultados_doacao %}
+            <div class="custom-card my-2">
+                <img class="custom-img" src="http://avatars.dicebear.com/api/open-peeps/stefan.svg">
+                <a href="{% url "acesso_doacao" doacao.id_doacao %}" id = "doacao_encontrada" class="custom-name" style="color: #000000"> {{ doacao.nome_padrinho }} </a>
+            </div>
+            <br>
+            {% endfor %}
+            {% else %} 
+            <h2 class="text-center"> DOAÇÃO NÃO ENCONTRADA!! </h2>
+            {% endif %}
+        </div>
+    </div>
+</div>

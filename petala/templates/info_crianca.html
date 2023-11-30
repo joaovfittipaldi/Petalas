@@ -1,11 +1,87 @@
 {% include "navbar.html" %}
 
-<div class="container"> <br>
-  <div class="d-flex justify-content-between py-3">
-    <a href="/criancas/" class="btn custom-btn titulo-site">VOLTAR</a>
-    <a href="#" class="btn custom-btn titulo-site">ATIVIDADES DA CRIANÇA</a>
-  </div>
-  <div class="container mt-2 d-flex align-items-center justify-content-center"> 
+<style> 
+
+  .crianca{
+    flex-shrink: 0;
+    border-radius: 19.402px;
+    background: #336116;
+    {% comment %} width: 724px;
+    left: 400px; {% endcomment %}
+    width: 1086px;
+    left: 213px;
+    top: 250px;
+    bottom: 37px;
+  }
+
+  .dados-criancas{
+    width: 454px;
+    height: 61px;
+    flex-shrink: 0;
+    color: #336116;
+    text-align: center;
+    font-family: Kumbh Sans;
+    font-size: 49px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;;
+    top: 153px;
+    left: 519px;
+  }
+
+  .nome{
+    width: 539px;
+    height: 48px;
+    flex-shrink: 0;
+    color: #FFF;
+    font-family: Kumbh Sans;
+    font-size: 45px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    top: 54px;
+    left: 291px;
+  }
+
+  .itens{
+    width: 539px;
+    height: 53.103px;
+    flex-shrink: 0;
+    color: #FFF;
+    font-family: Kumbh Sans;
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    left: 291px;
+  }
+
+  .nome-filial{
+    color: #FFF;
+    font-family: Kumbh Sans;
+    font-size: 33.529px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    left: 80px;
+  }
+
+  .cpf{
+    color: #FFF;
+    font-family: Kumbh Sans;
+    font-size: 29.712px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+    left: 80px;
+  }
+
+</style>
+    
+    <div class="dados-criancas position-absolute"> Dados da Crianças </div>
+    <a href="{% url 'listagem_criancas' crianca.turma %}" class="btn voltar-btn titulo-site position-absolute">VOLTAR</a>
+
+  {% comment %} <div class="container mt-2 d-flex align-items-center justify-content-center position-absolute dados-crianca"> 
     <div class="card col-lg-5">
       <div class="card-body">
         <h5 class="titulo-site text-center" style="color: #bf9000; font-size: x-large">{{crianca.nome}}</h5> <br>
@@ -18,9 +94,28 @@
         <p>Permanência: {{crianca.permanencia}}</p>
         <p>Turma: {{crianca.turma}}</p>
         <p>Autoavaliação: {{crianca.autoavaliacao}}</p>
-        <p>Faltas: {{crianca.faltas}}</p>
       </div>
     </div>
-</div>
+</div> {% endcomment %}
+
+
+<div class=" position-absolute crianca"> 
+  {% comment %} <h5 class="titulo-site text-center" style="color: #bf9000; font-size: x-large">{{crianca.nome}}</h5> <br>
+  <p>ID: {{crianca.id_crianca}}</p>
+  <p>Status: {{crianca.status}}</p>
+  <p>Período: {{crianca.periodo}}</p>
+  <p>Permanência: {{crianca.permanencia}}</p>
+  <p>Turma: {{crianca.turma}}</p>
+  <p>Autoavaliação: {{crianca.autoavaliacao}}</p> {% endcomment %}
+  <div class="position-absolute nome"> {{crianca.nome|title}} </div>
+  <div class="position-relative itens" style="top: 102px;"> {{ crianca.nascimento|date:"d-m-Y" }} - {{crianca.idade}} Anos </div>
+  <div class="position-absolute itens" style="top: 132px;"> CPF: </div>
+  <div class="position-absolute itens" style="top: 160px;"> Ingressou em {{crianca.entrada|date:"d-m-Y"}}</div>
+  <div class="position-absolute nome" style="top: 210px; left: 80px;"> Filiação:</div>
+  <div class="position-absolute nome-filial" style="top: 260px;"> Nome de Teste </div>
+  <div class="position-absolute cpf" style="top: 295px;"> CPF: XXX.XXX.XXX-XX </div>
+  <div class="position-absolute nome-filial" style="top: 323px;"> Nome de Teste </div>
+  <div class="position-absolute cpf" style="top: 360px;"> CPF: XXX.XXX.XXX-XX </div>
+
 </div>
 
