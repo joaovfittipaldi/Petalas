@@ -42,65 +42,57 @@ class Historia01(LiveServerTestCase):
         time.sleep(1)
 
         # insere o nome da crianca
-        nome_crianca = driver.find_element(By.ID, 'inputNome')
-        nome_crianca.click()
-        nome_crianca.send_keys('Julia Almeida')
+        nome = driver.find_element(By.ID, 'nome')
+        nome.click()
+        nome.send_keys('Maria joanna')
         time.sleep(1)
 
         # insere a idae da crianca 
-        idade_crianca = driver.find_element(By.ID, 'inputIdade')
-        idade_crianca.click()
-        idade_crianca.send_keys("10")
+        idade = driver.find_element(By.ID, 'idade')
+        idade.click()
+        idade.send_keys("10")
         time.sleep(1)
 
         # insere a data de nascimento
-        data_nascimento = driver.find_element(By.ID, 'inputNascimento')
+        data_nascimento = driver.find_element(By.ID, 'nascimento')
         data_nascimento.click()
         data_nascimento.send_keys('10112007')
         time.sleep(1)
     
-
         #insere o periodo da crianca
-        selecionar_turno = driver.find_element(By.ID, 'inputPeriodo')
+        selecionar_turno = driver.find_element(By.ID, 'periodo')
         #padrinho_doacao.click()
         select = Select(selecionar_turno)
         select.select_by_visible_text("Manhã")
         time.sleep(1)
 
         # insere a data de entrada da crianca na ong
-        data_entrada = driver.find_element(By.ID, 'inputCity')
+        data_entrada = driver.find_element(By.ID, 'data_entrada')
         data_entrada.click()
         data_entrada.send_keys('10032021')
         time.sleep(1)
 
         # insere o tempo de permanencia da crianca na ong
-        tempo_permanencia = driver.find_element(By.ID, 'inputZip')
+        tempo_permanencia = driver.find_element(By.ID, 'tempo_permanencia')
         tempo_permanencia.click()
         tempo_permanencia.send_keys('2 meses')
         time.sleep(1)
-
-        #insere o periodo da crianca
-        selecionar_turma = driver.find_element(By.ID, 'inputTurma')
-        #padrinho_doacao.click()
-        select = Select(selecionar_turma)
-        select.select_by_visible_text("Eu e o Mundo - Tarde")
-        time.sleep(1)
         
         #insere a avaliacao da crianca
-        selecionar_avaliacao = driver.find_element(By.ID, 'inputAutoavaliacao')
+        selecionar_avaliacao = driver.find_element(By.ID, 'autoavaliacao')
         #padrinho_doacao.click()
         select = Select(selecionar_avaliacao)
         select.select_by_visible_text("Verde")
         time.sleep(1)
         
         # informa o status da crianca
-        status_crianca = driver.find_element(By.ID, 'inputStatus')
+        status_crianca = driver.find_element(By.ID, 'status')
         status_crianca.click()
         status_crianca.send_keys('Meiga, Gentil e com otimo comportamento!')
         time.sleep(1)
 
         #aperta o botao cadastro
-        botao_cadastrarcrianca = driver.find_element(By.ID, 'botao_cadastrarcrianca')
+        botao_cadastrarcrianca = driver.find_element(By.ID, 'botao_cadastrar_crianca')
         botao_cadastrarcrianca.click()
         time.sleep(1)
 
@@ -125,64 +117,56 @@ class Historia01(LiveServerTestCase):
         time.sleep(1)
 
         # insere o nome da crianca
-        nome_crianca = driver.find_element(By.ID, 'inputNome')
+        nome_crianca = driver.find_element(By.ID, 'nome')
         nome_crianca.click()
-        nome_crianca.send_keys('Emanuel Eduardo')
+        nome_crianca.send_keys('Lucas fernando')
         time.sleep(1)
 
         # insere a idae da crianca 
-        idade_crianca = driver.find_element(By.ID, 'inputIdade')
+        idade_crianca = driver.find_element(By.ID, 'idade')
         idade_crianca.click()
         idade_crianca.send_keys("11")
         time.sleep(1)
 
         # insere a data de nascimento
-        data_nascimento = driver.find_element(By.ID, 'inputNascimento')
+        data_nascimento = driver.find_element(By.ID, 'nascimento')
         data_nascimento.click()
         data_nascimento.send_keys('10112008')
         time.sleep(1)
     
-
         #insere o periodo da crianca
-        selecionar_turno = driver.find_element(By.ID, 'inputPeriodo')
+        selecionar_turno = driver.find_element(By.ID, 'periodo')
         #padrinho_doacao.click()
         select = Select(selecionar_turno)
         select.select_by_visible_text("Manhã")
         time.sleep(1)
 
         # insere a data de entrada da crianca na ong
-        data_entrada = driver.find_element(By.ID, 'inputCity')
+        data_entrada = driver.find_element(By.ID, 'data_entrada')
         data_entrada.click()
         data_entrada.send_keys('10032021')
         time.sleep(1)
 
         # insere o tempo de permanencia da crianca na ong
-        tempo_permanencia = driver.find_element(By.ID, 'inputZip')
+        tempo_permanencia = driver.find_element(By.ID, 'tempo_permanencia')
         tempo_permanencia.click()
         tempo_permanencia.send_keys('3 meses')
         time.sleep(1)
-
-        #insere o periodo da crianca
-        selecionar_turma = driver.find_element(By.ID, 'inputTurma')
-        #padrinho_doacao.click()
-        select = Select(selecionar_turma)
-        select.select_by_visible_text("Eu e o Mundo - Tarde")
-        time.sleep(1)
         
         #insere a avaliacao da crianca
-        selecionar_avaliacao = driver.find_element(By.ID, 'inputAutoavaliacao')
+        selecionar_avaliacao = driver.find_element(By.ID, 'autoavaliacao')
         #padrinho_doacao.click()
         select = Select(selecionar_avaliacao)
-        select.select_by_visible_text("Verde")
+        select.select_by_visible_text("Amarelo")
         time.sleep(1)
         
         # informa o status da crianca
-        status_crianca = driver.find_element(By.ID, 'inputStatus')
+        status_crianca = driver.find_element(By.ID, 'status')
         status_crianca.click()
-        status_crianca.send_keys('Meiga, Gentil e com otimo comportamento!')
+        status_crianca.send_keys('Tranquilo e gente boa!')
         time.sleep(1)
 
         #aperta o botao cadastro
-        botao_cadastrarcrianca = driver.find_element(By.ID, 'botao_cadastrarcrianca')
+        botao_cadastrarcrianca = driver.find_element(By.ID, 'botao_cadastrar_crianca')
         botao_cadastrarcrianca.click()
         time.sleep(1)

@@ -36,7 +36,7 @@ class Historia07(LiveServerTestCase):
         
         pesquisar_crianca.send_keys(Keys.RETURN)
         time.sleep(1)
-
+        
     def test_007_scenario2(self):
 
         driver = setup_selenium()
@@ -47,7 +47,7 @@ class Historia07(LiveServerTestCase):
         pesquisar_crianca = driver.find_element(By.ID, 'busca')
         
         #escreve Maria e não encontra
-        pesquisar_crianca.send_keys('Maria')
+        pesquisar_crianca.send_keys('Luisa')
         time.sleep(1)
 
         pesquisar_crianca.send_keys(Keys.RETURN)
