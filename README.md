@@ -120,19 +120,19 @@
   </li>
   <li>
     <a
-      href="https://drive.google.com/drive/u/1/folders/1EMyuLHtG5cpK_m_6_LHvhgKH7w5mCK0M"
+      href="https://drive.google.com/file/d/1sTNkGlVsNNSv4P__9qFsFjUsWL0qVdLU/view?usp=sharing"
       >ScreenCast Testes</a
     >
   </li>
    <li>
     <a
-      href="https://drive.google.com/drive/u/1/folders/1EMyuLHtG5cpK_m_6_LHvhgKH7w5mCK0M"
+      href="https://drive.google.com/file/d/1zPbVFevL8Yi3fbdptONFnHvdxOua_2Cp/view?usp=sharing"
       >CI/CD</a
     >
   </li>
    <li>
     <a
-      href="https://drive.google.com/drive/u/1/folders/1EMyuLHtG5cpK_m_6_LHvhgKH7w5mCK0M"
+      href="https://drive.google.com/file/d/1SXLmgy4pW2fR7N5FZo9z2E8vof7WH-kL/view?usp=sharing"
       >ScreenCast - Aplicação</a
     >
   
