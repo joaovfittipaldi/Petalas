@@ -63,7 +63,7 @@
   <li>
     <a
       href="https://docs.google.com/document/d/1iQNB5QMGJxw8iCMjCIQ4oLCSGe9qLoX5X6_qNVmZIcw/edit?usp=drive_link"
-      >Histórias do usuári</a
+      >Histórias do usuário</a
     >
   </li>
   <li>
@@ -124,6 +124,14 @@
       >ScreenCast Testes</a
     >
   </li>
+   <li>
+    <a
+      href="https://drive.google.com/drive/u/1/folders/1EMyuLHtG5cpK_m_6_LHvhgKH7w5mCK0M"
+      >CI/CD</a
+    >
+  </li>
+
+  
   
   
 <h2>Como utilizar a aplicação localmente</h2>
