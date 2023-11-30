@@ -234,7 +234,7 @@
 
       {% comment %}<form class="d-flex search-bar" role="search" method="GET" action="{% url 'resultado_pesquisa' %}">
           <input id="busca" class="form-control me-2" type="search" name="pesquisa" placeholder="Pesquisar..." aria-label="Pesquisar..." style="border-radius: 26.5px;">
-            <button id="pesquisa" class="btn btn-outline-success" type="submit">
+            <button class="btn btn-outline-success" type="submit">
             Search
           </button>  
         </form>{% endcomment %}
@@ -242,12 +242,11 @@
         <form class="d-flex search-bar" role="search" method="GET" action="{% url 'resultado_pesquisa' %}">
           {% comment %} <div class="position-relative"> {% endcomment %}
             <input id="busca" type="search" name="pesquisa" class="form-control" placeholder="Pesquisar..." aria-label="Pesquisar..." style="border-radius: 26.5px; padding-right: 30px; width: 100%;">
-            {% comment %} <i class="fas fa-search position-absolute" style="right: 10px; top: 20px; transform: translateY(-50%);"></i> {% endcomment %}
-          {% comment %} </div> {% endcomment %}
+          </div>
       </form>
     
       
-     <i class="fas fa-search position-absolute" style="right: 225px; top: 45px;"></i>
+     <i id="pesquisa" class="fas fa-search position-absolute" style="right: 225px; top: 45px;"></i>
       
     </nav>
 

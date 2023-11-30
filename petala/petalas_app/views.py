@@ -135,20 +135,19 @@ def cadastro_presenca(request, turma_atual):
         data = request.POST.get('data')
         criancas_presentes = request.POST.getlist('criancas_presentes')
 
-        for crianca_id in criancas_presentes:
-            crianca = Crianca.objects.get(id_crianca=crianca_id)
-            nova_presenca = Presenca(
-                data=data,
-                turma=turma_atual,
-                crianca=crianca,
-                presente=True 
-            )
-            nova_presenca.save()
+        nova_presenca = Presenca(
+            data=data,
+            turma=turma_atual,
+            crianca_nome=', '.join(criancas_presentes),
+            presentes = True
+        )
+
+        nova_presenca.save()
         
         try:
             context = {
-                'presencas': Presenca.objects.filter(turma = turma_atual),
-                'turma' : turma_atual,
+                'presencas': Presenca.objects.filter(turma=turma_atual),
+                'turma': turma_atual,
             }
             return render(request, 'presencas.html', context)
         except ObjectDoesNotExist:

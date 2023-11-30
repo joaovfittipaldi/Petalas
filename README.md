@@ -106,10 +106,16 @@
       >Histórias do usuário</a
     >
   </li>
-   <li>
+  <li>
     <a
       href="https://docs.google.com/document/d/12WzarDKRioVPRG49SQ_295nON9rk74GDR3W6Ke5bvbA/edit"
       >Programação em Par</a
+    >
+  </li>
+  <li>
+    <a
+      href="https://drive.google.com/file/d/1cscw2HxrJvH8hKqrHuIAI_8h0LYtzsJ3/view?usp=drive_link"
+      >Diagrama de Atividades</a
     >
   </li>
   

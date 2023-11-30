@@ -20,13 +20,12 @@
 </style>
 
 
-
+  
       <div class="doacoes-recentes position-absolute"> Doações Recentes </div>
       <a href="/"> <div class="btn voltar-btn titulo-site position-absolute">VOLTAR </div> </a>
-      {% comment %} <a href="/cadastro_doacao/" class="btn new-donate-btn titulo-site">REGISTRAR NOVA DOAÇÃO</a> {% endcomment %}
+      <a href="/cadastro_doacao/" class="btn custom-btn titulo-site" id="nova_doacao">REGISTRAR NOVA DOAÇÃO</a>
 
-    {% comment %} <br> <br>
-
+  <div class="container">
     <div class="row">
       {% if doacoes %}
         {% for doacao in doacoes %}
@@ -34,7 +33,7 @@
             <div class="child-card">
               <div class="child-image"> </div>
               <div class="custom-name texto-site"> 
-                <a href="{% url 'info_doacao' doacao.id_doacao %}" style="color: #783f04"> {{doacao.nome_padrinho|title}} </a>
+                <a href="{% url 'info_doacao' doacao.id_doacao %}" style="color: #783f04" id="info_doacao"> {{doacao.nome_padrinho|title}} </a>
               </div>
             </div>
             <br>
@@ -43,5 +42,6 @@
     </div> 
       {% else %}
       <h1> NÃO HÁ DOAÇÕES REGISTRADAS </h1>
-      {% endif %} {% endcomment %}
+      {% endif %}
+  </div>
 

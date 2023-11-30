@@ -1,6 +1,6 @@
 {% include "navbar.html" %}
 
-<form class="row g-3" method="post" action="{% url 'listagem_presencas' turma_atual=turma %}">
+<form class="row g-3" method="post" action="{% url 'cadastro_presenca' turma_atual=turma %}">
   {% csrf_token %}
   <div class="col-md-6">
     <label for="inputData" class="form-label">Data</label>
@@ -9,7 +9,7 @@
   {% for crianca in criancas %}
   <div class="col-md-6">
     <div class="form-check">
-    <input class="form-check-input" type="checkbox" name="criancas_presentes" value="{{ crianca.id_crianca }}" id="checkCrianca{{ crianca.id_crianca }}">
+    <input class="form-check-input" type="checkbox" name="criancas_presentes" value="{{ crianca.nome }}" id="checkCrianca{{ crianca.id_crianca }}">
     <label class="form-check-label" for="checkCrianca{{ crianca.id_crianca }}">
         {{crianca.nome}}
     </label>
