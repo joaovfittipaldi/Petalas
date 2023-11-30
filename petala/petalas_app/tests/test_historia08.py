@@ -31,7 +31,7 @@ class Historia08(LiveServerTestCase):
         pesquisar_crianca = driver.find_element(By.ID, 'busca')
 
         #escreve e acha Cleber
-        pesquisar_crianca.send_keys('Cleber')
+        pesquisar_crianca.send_keys('Rodrigo')
         time.sleep(1)
         
         pesquisar_crianca.send_keys(Keys.RETURN)

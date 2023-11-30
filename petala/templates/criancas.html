@@ -1,8 +1,7 @@
 {% include "navbar.html" %}
 
-<style> 
-
-  .criancas{
+<style>
+  .criancas {
     width: 510px;
     height: 55px;
     flex-shrink: 0;
@@ -17,7 +16,7 @@
     left: 501px;
   }
 
-  .registrar-crianca{
+  .registrar-crianca {
     width: 296px;
     height: 48px;
     flex-shrink: 0;
@@ -32,7 +31,7 @@
     right: 244px;
   }
 
-  .child-list{
+  .child-list {
     flex-shrink: 0;
     border-radius: 19.402px;
     background: #336116;
@@ -40,39 +39,57 @@
     top: 292px;
   }
 
-  hr{
+  hr {
     width: 920px;
     height: 0px;
     flex-shrink: 0;
     stroke-width: 2px;
-    stroke: #FFF;
-    background-color: #FFFFFF;
+    stroke: #fff;
+    background-color: #ffffff;
   }
-
-  
-
 </style>
 
-
-      <a href="/turmas/"> <div class="btn voltar-btn titulo-site position-absolute">VOLTAR </div> </a>
-      <div class="criancas position-absolute"> Crianças </div>
-      <a href="{% url 'cadastro_crianca' turma %}" > <div class="registrar-crianca position-absolute" id="registrar_crianca"> +Registrar Criança </div> <a>
-      <a id="lista_presenca" href="{% url 'listagem_presencas' turma_atual=turma %}"> <div class="registrar-crianca position-absolute" style="left: 222px;"> +Ver Lista de Presença </div> </a>
-
- <div class="container child-list position-absolute">
-      {% if criancas %}
-        {% for crianca in criancas %}
-
-           <div class="child-card">
-              <div style="padding-left: 71px; padding-top: 37px;"> <div class="child-image"> </div> </div>
-              <div class="custom-name" style="padding-left: 10px;"> 
-                <a href="{% url 'info_crianca' crianca.id_crianca %}" style="color: #ffffff;" id="acessa_crianca"> {{crianca.nome|title}} </a>
-              </div>
-            </div>
-            <hr>
-
-        {% endfor %}
-      {% else %}
-      <h1> NÃO HÁ CRIANÇAS REGISTRADAS NESSA TURMA!! </h1>
-      {% endif %}
+<a href="/turmas/">
+  <div class="btn voltar-btn titulo-site position-absolute">VOLTAR</div>
+</a>
+<div class="criancas position-absolute">Crianças</div>
+<a href="{% url 'cadastro_crianca' turma %}">
+  <div class="registrar-crianca position-absolute" id="registrar_crianca">
+    +Registrar Criança
   </div>
+  <a>
+    <a href="{% url 'listagem_presencas' turma_atual=turma %}">
+      <div
+        id="lista_presenca"
+        class="registrar-crianca position-absolute"
+        style="left: 222px"
+      >
+        +Ver Lista de Presença
+      </div>
+    </a>
+
+    <div class="container child-list position-absolute">
+      {% if criancas %} {% for crianca in criancas %}
+
+      <div class="child-card">
+        <div style="padding-left: 71px; padding-top: 37px">
+          <div class="child-image"></div>
+        </div>
+        <div class="custom-name" style="padding-left: 10px">
+          <a
+            href="{% url 'info_crianca' crianca.id_crianca %}"
+            style="color: #ffffff"
+            id="acessa_crianca"
+          >
+            {{crianca.nome|title}}
+          </a>
+        </div>
+      </div>
+      <hr />
+
+      {% endfor %} {% else %}
+      <h1>NÃO HÁ CRIANÇAS REGISTRADAS NESSA TURMA!!</h1>
+      {% endif %}
+    </div>
+  </a></a
+>
