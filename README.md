@@ -63,7 +63,7 @@
   <li>
     <a
       href="https://docs.google.com/document/d/1iQNB5QMGJxw8iCMjCIQ4oLCSGe9qLoX5X6_qNVmZIcw/edit?usp=drive_link"
-      >Histórias do usuário</a
+      >Histórias do usuári</a
     >
   </li>
   <li>
