@@ -56,8 +56,8 @@
 
       <a href="/turmas/"> <div class="btn voltar-btn titulo-site position-absolute">VOLTAR </div> </a>
       <div class="criancas position-absolute"> Crianças </div>
-      <a href="{% url 'cadastro_crianca' turma %}" > <div class="registrar-crianca position-absolute"> +Registrar Criança </div> <a>
-      <a href="{% url 'listagem_presencas' turma_atual=turma %}" class="btn custom-btn">Ver Lista de Presença</a>
+      <a href="{% url 'cadastro_crianca' turma %}" > <div class="registrar-crianca position-absolute" id="registrar_crianca"> +Registrar Criança </div> <a>
+      <a id="lista_presenca" href="{% url 'listagem_presencas' turma_atual=turma %}"> <div class="registrar-crianca position-absolute" style="left: 222px;"> +Ver Lista de Presença </div> </a>
 
  <div class="container child-list position-absolute">
       {% if criancas %}

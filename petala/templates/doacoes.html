@@ -17,31 +17,77 @@
     left: 501px;
   }
 
+  .registrar-doacao{
+    width: 296px;
+    height: 48px;
+    flex-shrink: 0;
+    color: #336116;
+    text-align: center;
+    font-family: Kumbh Sans;
+    font-size: 31px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    top: 244px;
+    right: 244px;
+  }
+
+  .child-list{
+    flex-shrink: 0;
+    border-radius: 19.402px;
+    background: #336116;
+    left: 213px;
+    top: 292px;
+  }
+
+  hr{
+    width: 920px;
+    height: 0px;
+    flex-shrink: 0;
+    stroke-width: 2px;
+    stroke: #FFF;
+    background-color: #FFFFFF;
+  }
+
 </style>
 
 
   
       <div class="doacoes-recentes position-absolute"> Doações Recentes </div>
       <a href="/"> <div class="btn voltar-btn titulo-site position-absolute">VOLTAR </div> </a>
-      <a href="/cadastro_doacao/" class="btn custom-btn titulo-site" id="nova_doacao">REGISTRAR NOVA DOAÇÃO</a>
+      <a href="/cadastro_doacao/"> <div  class="registrar-doacao position-absolute" id="nova_doacao"> +Registrar Doação </div> </a>
 
-  <div class="container">
-    <div class="row">
+  <div class="container child-list position-absolute">
       {% if doacoes %}
         {% for doacao in doacoes %}
-          <div class="col-md-6 justify-content-between">
             <div class="child-card">
-              <div class="child-image"> </div>
-              <div class="custom-name texto-site"> 
-                <a href="{% url 'info_doacao' doacao.id_doacao %}" style="color: #783f04" id="info_doacao"> {{doacao.nome_padrinho|title}} </a>
+              <div class="custom-name" style="padding-left: 60px; padding-top: 40px;"> 
+                <a href="{% url 'info_doacao' doacao.id_doacao %}" style="color: #ffffff" id="info_doacao"> {{doacao.nome_padrinho|title}} </a>
+                <div> </div>
               </div>
             </div>
-            <br>
-          </div>
+            <hr>
         {% endfor %}
-    </div> 
       {% else %}
       <h1> NÃO HÁ DOAÇÕES REGISTRADAS </h1>
       {% endif %}
   </div>
 
+{% comment %} 
+  <div class="container child-list position-absolute">
+    {% if criancas %}
+      {% for crianca in criancas %}
+
+         <div class="child-card">
+            <div style="padding-left: 71px; padding-top: 37px;"> <div class="child-image"> </div> </div>
+            <div class="custom-name" style="padding-left: 10px;"> 
+              <a href="{% url 'info_crianca' crianca.id_crianca %}" style="color: #ffffff;" id="acessa_crianca"> {{crianca.nome|title}} </a>
+            </div>
+          </div>
+          <hr>
+
+      {% endfor %}
+    {% else %}
+    <h1> NÃO HÁ CRIANÇAS REGISTRADAS NESSA TURMA!! </h1>
+    {% endif %}
+</div> {% endcomment %}

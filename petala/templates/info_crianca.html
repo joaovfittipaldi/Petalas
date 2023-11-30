@@ -25,13 +25,13 @@
     font-style: normal;
     font-weight: 700;
     line-height: normal;;
-    top: 168px;
+    top: 153px;
     left: 519px;
   }
 
   .nome{
     width: 539px;
-    height: 53.103px;
+    height: 48px;
     flex-shrink: 0;
     color: #FFF;
     font-family: Kumbh Sans;
@@ -43,7 +43,7 @@
     left: 291px;
   }
 
-  .idade{
+  .itens{
     width: 539px;
     height: 53.103px;
     flex-shrink: 0;
@@ -53,8 +53,27 @@
     font-style: normal;
     font-weight: 400;
     line-height: normal;
-    top: 121px;
     left: 291px;
+  }
+
+  .nome-filial{
+    color: #FFF;
+    font-family: Kumbh Sans;
+    font-size: 33.529px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    left: 80px;
+  }
+
+  .cpf{
+    color: #FFF;
+    font-family: Kumbh Sans;
+    font-size: 29.712px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+    left: 80px;
   }
 
 </style>
@@ -89,8 +108,14 @@
   <p>Turma: {{crianca.turma}}</p>
   <p>Autoavaliação: {{crianca.autoavaliacao}}</p> {% endcomment %}
   <div class="position-absolute nome"> {{crianca.nome|title}} </div>
-  <div class="position-absolute idade"> {{ crianca.nascimento|date:"d-m-Y" }} - {{crianca.idade}} Anos </div>
-  <div class="position-absolute idade" style="top: 166px;"> CPF: </div>
-  <div class="position-absolute idade" style="top: 211px;"> Ingressou em {{crianca.entrada|date:"d-m-Y"}}</div>
+  <div class="position-relative itens" style="top: 102px;"> {{ crianca.nascimento|date:"d-m-Y" }} - {{crianca.idade}} Anos </div>
+  <div class="position-absolute itens" style="top: 132px;"> CPF: </div>
+  <div class="position-absolute itens" style="top: 160px;"> Ingressou em {{crianca.entrada|date:"d-m-Y"}}</div>
+  <div class="position-absolute nome" style="top: 210px; left: 80px;"> Filiação:</div>
+  <div class="position-absolute nome-filial" style="top: 260px;"> Nome de Teste </div>
+  <div class="position-absolute cpf" style="top: 295px;"> CPF: XXX.XXX.XXX-XX </div>
+  <div class="position-absolute nome-filial" style="top: 323px;"> Nome de Teste </div>
+  <div class="position-absolute cpf" style="top: 360px;"> CPF: XXX.XXX.XXX-XX </div>
+
 </div>
 
