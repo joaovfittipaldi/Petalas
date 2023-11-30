@@ -1,20 +1,26 @@
 {% include "navbar.html" %}
 
+<style> 
+  body{
+    overflow-x: hidden;
+  }
+</style>
+
 <form class="row g-3" method="post" action="{% url 'listagem_doacoes' %}">
   {% csrf_token %}
   <div class="col-md-6">
     <label for="inputEmail4" class="form-label">Padrinho</label>
     <input type="text" name="nome_padrinho" class="form-control" id="inputNomePadrinho" />
   </div>
-  <div class="col-md-6">
+  <div class="col-md-5">
     <label for="inputState" class="form-label">CPF</label>
-    <input type="number" name="cpf" class="form-control" id="inputCPF" />
+    <input type="text" name="cpf" class="form-control" id="inputCPF" />
   </div>
   <div class="col-md-6">
     <label for="inputPassword4" class="form-label">Valor</label>
     <input type="number" name="valor" class="form-control" id="inputValor" />
   </div>
-  <div class="col-md-6">
+  <div class="col-md-5">
     <label for="inputCity" class="form-label">Destino</label>
     <input type="text" name="nome_crianca" class="form-control" id="inputNomeCrianca" />
   </div>
@@ -30,6 +36,8 @@
   <br />
   <br />
   <div class="col-12">
-    <button type="submit" class="btn btn-primary" id="botao_cadastrar">Cadastrar</button>
+    <button type="submit" class="btn voltar-btn btn-primary" id="botao_cadastrar">Cadastrar</button>
+    <a href="/doacoes/"> <div class="btn voltar-btn"> Cancelar </div> </a>
   </div>
+  
 </form>

@@ -1,42 +1,36 @@
 {% include "navbar.html" %}
 
+<style> 
+  body{
+    overflow-x: hidden;
+  }
+</style>
+
 <form class="row g-3" method="post" action="{% url 'cadastro_crianca' turma %}">
   {% csrf_token %}
   <div class="col-md-6">
-    <label for="inputEmail4" class="form-label">Nome</label>
-    <input type="text" name="nome" class="form-control" id="inputNome" />
+    <label for="nome" class="form-label">Nome</label>
+    <input type="text" name="nome" class="form-control" id="nome" />
   </div>
   <div class="col-md-6">
-    <label for="inputPassword4" class="form-label">Idade</label>
-    <input type="number" name="idade" class="form-control" id="inputIdade" />
+    <label for="idade" class="form-label">Idade</label>
+    <input type="number" name="idade" class="form-control" id="idade" />
   </div>
   <div class="col-md-6">
-    <label for="idade" class="form-label">Nascimento</label>
+    <label for="nascimento" class="form-label">Nascimento</label>
     <input
       type="date"
       name="nascimento"
       class="form-control"
-      id="inputNascimento"
+      id="nascimento"
     />
   </div>
-  <div class="col-md-4">
-    <label for="inputState" class="form-label">Período</label>
-    <select id="inputPeriodo" class="form-select" name="periodo">
-      <option selected>...</option>
-      <option>Manhã</option>
-      <option>Tarde</option>
-    </select>
-  </div>
   <div class="col-md-6">
-    <label for="inputCity" class="form-label">Data de Entrada</label>
-    <input type="date" name="entrada" class="form-control" id="inputCity" />
-  </div>
-  <div class="col-md-2">
-    <label for="inputZip" class="form-label">Tempo de Permanência</label>
-    <input type="text" name="permanencia" class="form-control" id="inputZip" />
+    <label for="data_entrada" class="form-label">Data de Entrada</label>
+    <input type="date" name="entrada" class="form-control" id="data_entrada" />
   </div>
   {% comment %} <div class="col-md-4">
-    <label for="inputState" class="form-label">Turma</label>
+    <label for="inputState" class="form-label" id="""t">Turma</label>
     <select id="inputTurma" class="form-select" name="turma">
       <option selected>...</option>
       <option>Eu e o Mundo - Manhã</option>
@@ -45,24 +39,34 @@
       <option>Nós e o Mundo - Tarde</option>
     </select>
   </div> {% endcomment %}
-  <br />
-  <div class="col-md-4">
-    <label for="inputState" class="form-label">Autoavaliação</label>
-    <select id="inputAutoavaliacao" class="form-select" name="autoavaliacao">
-      <option selected>...</option>
-      <option>Verde</option>
-      <option>Amarelo</option>
-      <option>Vermelho</option>
-    </select>
+  <div class="col-md-6">
+    <label for="status" class="form-label">CPF</label>
+    <input type="text" name="cpf_crianca" class="form-control" id="CPFCrianca" />
   </div>
   <div class="col-md-6">
-    <label for="inputPassword4" class="form-label">Status</label>
-    <input type="text" name="status" class="form-control" id="inputStatus" />
+    <label for="status" class="form-label">Nome Responsável</label>
+    <input type="text" name="nome_resp" class="form-control" id="NomeResponsavel" />
   </div>
+  <div class="col-md-6">
+    <label for="status" class="form-label">CPF do Responsável</label>
+    <input type="text" name="cpf_resp" class="form-control" id="CPFResponsavel" />
+  </div>
+  <div class="col-md-6">
+    <label for="status" class="form-label">Email do Responsável</label>
+    <input type="text" name="email_resp" class="form-control" id="EmailResponsavel" />
+  </div>
+  <div class="col-md-6">
+    <label for="status" class="form-label">Telefone do Responsável</label>
+    <input type="text" name="tel_resp" class="form-control" id="TelefoneResponsavel" />
+  </div>
+  <br />
   <br />
   <br />
   <br />
   <div class="col-12">
-    <button type="submit" class="btn btn-primary" id="botao_cadastrarcrianca">Cadastrar</button>
+  
+    <button id='botao_cadastrar_crianca' type="submit" class="btn voltar-btn btn-primary" style="border: 0px;">Cadastrar</button>
+    <a href="{% url 'listagem_criancas' turma %}"> <div class="btn voltar-btn"> Cancelar </div> </a>
+
   </div>
 </form>
