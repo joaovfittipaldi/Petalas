@@ -24,3 +24,17 @@ class Historia06(LiveServerTestCase):
     def test_006_scenario1(self):
 
         driver = setup_selenium()
+        default_page(driver)
+
+        #Clica no botão de doações
+        #Visualiza as doações pelo nome dos padrinhos
+        doacao = driver.find_element(By.ID, 'doacao')
+        doacao.click()
+        time.sleep(1)
+        
+        #seleciona padrinho para visualizar doação
+        seleciona_doador = driver.find_element(By.ID, 'info_doacao')
+        seleciona_doador.click()
+        time.sleep(1)
+
+
