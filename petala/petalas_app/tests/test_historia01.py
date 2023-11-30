@@ -44,7 +44,7 @@ class Historia01(LiveServerTestCase):
         # insere o nome da crianca
         nome = driver.find_element(By.ID, 'nome')
         nome.click()
-        nome.send_keys('Maria joanna')
+        nome.send_keys('Maria Joaquina')
         time.sleep(1)
 
         # insere a idae da crianca 
@@ -59,12 +59,6 @@ class Historia01(LiveServerTestCase):
         data_nascimento.send_keys('10112007')
         time.sleep(1)
     
-        #insere o periodo da crianca
-        selecionar_turno = driver.find_element(By.ID, 'periodo')
-        #padrinho_doacao.click()
-        select = Select(selecionar_turno)
-        select.select_by_visible_text("Manhã")
-        time.sleep(1)
 
         # insere a data de entrada da crianca na ong
         data_entrada = driver.find_element(By.ID, 'data_entrada')
@@ -72,23 +66,29 @@ class Historia01(LiveServerTestCase):
         data_entrada.send_keys('10032021')
         time.sleep(1)
 
-        # insere o tempo de permanencia da crianca na ong
-        tempo_permanencia = driver.find_element(By.ID, 'tempo_permanencia')
-        tempo_permanencia.click()
-        tempo_permanencia.send_keys('2 meses')
+        cpf_crianca = driver.find_element(By.ID, 'cpf_crianca')
+        cpf_crianca.click()
+        cpf_crianca.send_keys('89745387921')
         time.sleep(1)
-        
-        #insere a avaliacao da crianca
-        selecionar_avaliacao = driver.find_element(By.ID, 'autoavaliacao')
-        #padrinho_doacao.click()
-        select = Select(selecionar_avaliacao)
-        select.select_by_visible_text("Verde")
+
+        nome_responsavel = driver.find_element(By.ID, 'nome_responsavel')
+        nome_responsavel.click()
+        nome_responsavel.send_keys('Júlia Ferraz')
         time.sleep(1)
-        
-        # informa o status da crianca
-        status_crianca = driver.find_element(By.ID, 'status')
-        status_crianca.click()
-        status_crianca.send_keys('Meiga, Gentil e com otimo comportamento!')
+
+        cpf_responsavel = driver.find_element(By.ID, 'cpf_responsavel')
+        cpf_responsavel.click()
+        cpf_responsavel.send_keys('989765433911')
+        time.sleep(1)
+
+        email_responsavel = driver.find_element(By.ID, 'email_responsavel')
+        email_responsavel.click()
+        email_responsavel.send_keys('juliaff@cesar.school')
+        time.sleep(1)
+
+        telefone_responsavel = driver.find_element(By.ID, 'telefone_responsavel')
+        telefone_responsavel.click()
+        telefone_responsavel.send_keys('81999767867')
         time.sleep(1)
 
         #aperta o botao cadastro
@@ -119,7 +119,7 @@ class Historia01(LiveServerTestCase):
         # insere o nome da crianca
         nome_crianca = driver.find_element(By.ID, 'nome')
         nome_crianca.click()
-        nome_crianca.send_keys('Lucas fernando')
+        nome_crianca.send_keys('Lucas Carlos')
         time.sleep(1)
 
         # insere a idae da crianca 
@@ -133,13 +133,6 @@ class Historia01(LiveServerTestCase):
         data_nascimento.click()
         data_nascimento.send_keys('10112008')
         time.sleep(1)
-    
-        #insere o periodo da crianca
-        selecionar_turno = driver.find_element(By.ID, 'periodo')
-        #padrinho_doacao.click()
-        select = Select(selecionar_turno)
-        select.select_by_visible_text("Manhã")
-        time.sleep(1)
 
         # insere a data de entrada da crianca na ong
         data_entrada = driver.find_element(By.ID, 'data_entrada')
@@ -147,23 +140,30 @@ class Historia01(LiveServerTestCase):
         data_entrada.send_keys('10032021')
         time.sleep(1)
 
-        # insere o tempo de permanencia da crianca na ong
-        tempo_permanencia = driver.find_element(By.ID, 'tempo_permanencia')
-        tempo_permanencia.click()
-        tempo_permanencia.send_keys('3 meses')
+        cpf_crianca = driver.find_element(By.ID, 'cpf_crianca')
+        cpf_crianca.click()
+        cpf_crianca.send_keys('09876545632')
         time.sleep(1)
-        
-        #insere a avaliacao da crianca
-        selecionar_avaliacao = driver.find_element(By.ID, 'autoavaliacao')
-        #padrinho_doacao.click()
-        select = Select(selecionar_avaliacao)
-        select.select_by_visible_text("Amarelo")
+
+        nome_responsavel = driver.find_element(By.ID, 'nome_responsavel')
+        nome_responsavel.click()
+        nome_responsavel.send_keys('Marcos Gabriel')
         time.sleep(1)
-        
-        # informa o status da crianca
-        status_crianca = driver.find_element(By.ID, 'status')
-        status_crianca.click()
-        status_crianca.send_keys('Tranquilo e gente boa!')
+
+        cpf_responsavel = driver.find_element(By.ID, 'cpf_responsavel')
+        cpf_responsavel.click()
+        cpf_responsavel.send_keys('00978656711')
+        time.sleep(1)
+
+        email_responsavel = driver.find_element(By.ID, 'email_responsavel')
+        email_responsavel.click()
+        email_responsavel.send_keys('mga@cesar.school')
+        time.sleep(1)
+
+    
+        telefone_responsavel = driver.find_element(By.ID, 'telefone_responsavel')
+        telefone_responsavel.click()
+        telefone_responsavel.send_keys('119876539239')
         time.sleep(1)
 
         #aperta o botao cadastro

@@ -63,10 +63,9 @@ class Historia04(LiveServerTestCase):
     
         # insere a descricao da doacao 
         descricao_doacao = driver.find_element(By.ID, 'inputDescricao')
-        descricao_doacao.click()
-        descricao_doacao.send_keys('Se cuida, você é um menino bom!')
-        time.sleep(1)
-        
+        select = Select(descricao_doacao)
+        select.select_by_visible_text("Única")
+        time.sleep(1)    
 
         #aperta o botao cadastro
         botao_cadastrar = driver.find_element(By.ID, 'botao_cadastrar')
@@ -113,11 +112,11 @@ class Historia04(LiveServerTestCase):
         crianca_doacao.send_keys('vinicius aleluia')
         time.sleep(1)
     
-        # insere a descricao da doacao 
+         # insere a descricao da doacao 
         descricao_doacao = driver.find_element(By.ID, 'inputDescricao')
-        descricao_doacao.click()
-        descricao_doacao.send_keys('Você é muito inteligente, se cuida!')
-        time.sleep(1)
+        select = Select(descricao_doacao)
+        select.select_by_visible_text("Múltipla")
+        time.sleep(1)   
         
 
         #aperta o botao cadastro

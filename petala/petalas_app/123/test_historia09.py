@@ -58,6 +58,3 @@ class Historia09(LiveServerTestCase):
         
         confirma_crianca = driver.find_element(By.ID, 'cadastro_dia')
         confirma_crianca.click()
-
-
-        

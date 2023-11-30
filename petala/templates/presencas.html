@@ -1,8 +1,7 @@
 {% include "navbar.html" %}
 
-<style> 
-
-  .criancas{
+<style>
+  .criancas {
     width: 510px;
     height: 55px;
     flex-shrink: 0;
@@ -17,7 +16,7 @@
     left: 501px;
   }
 
-  .cadastrar-dia{
+  .cadastrar-dia {
     width: 296px;
     height: 48px;
     flex-shrink: 0;
@@ -32,7 +31,7 @@
     right: 244px;
   }
 
-  .child-list{
+  .child-list {
     flex-shrink: 0;
     border-radius: 19.402px;
     background: #336116;
@@ -40,34 +39,39 @@
     top: 292px;
   }
 
-  hr{
+  hr {
     width: 920px;
     height: 0px;
     flex-shrink: 0;
     stroke-width: 2px;
-    stroke: #FFF;
-    background-color: #FFFFFF;
+    stroke: #fff;
+    background-color: #ffffff;
   }
-
-  
 </style>
 
-
-  <a  href="{{ turma_url }}"> <div class="btn voltar-btn titulo-site position-absolute"> VOLTAR </div> </a>
-  <a id='novo_dia' href="{% url 'cadastro_presenca' turma_atual=turma %}" > <div class="cadastrar-dia position-absolute"> +Cadastrar Novo Dia </div> <a>
-
-
-<div class="container child-list position-absolute">
-      {% if presencas %}
-        {% for presenca in presencas %}
-            <div class="child-card">
-              <div class="custom-name texto-site"> 
-                <a href="{% url 'info_presenca' presenca.id_presenca %}" style="color: #ffffff"> {{presenca.data|title}} </a>
-              </div>
-            </div>
-            <hr>
-        {% endfor %}
-      {% else %}
-      <h1> NÃO HÁ PRESENÇAS REGISTRADAS NESSA TURMA!! </h1>
+<a href="{{ turma_url }}">
+  <div class="btn voltar-btn titulo-site position-absolute">VOLTAR</div>
+</a>
+<a id="novo_dia" href="{% url 'cadastro_presenca' turma_atual=turma %}">
+  <div class="cadastrar-dia position-absolute">+Cadastrar Novo Dia</div>
+  <a>
+    <div class="container child-list position-absolute">
+      {% if presencas %} {% for presenca in presencas %}
+      <div class="child-card">
+        <div class="custom-name texto-site">
+          <a
+            id="ver_presenca"
+            href="{% url 'info_presenca' presenca.id_presenca %}"
+            style="color: #ffffff"
+          >
+            {{presenca.data|title}}
+          </a>
+        </div>
+      </div>
+      <hr />
+      {% endfor %} {% else %}
+      <h1>NÃO HÁ PRESENÇAS REGISTRADAS NESSA TURMA!!</h1>
       {% endif %}
-  </div>
+    </div>
+  </a></a
+>
