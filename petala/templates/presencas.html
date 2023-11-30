@@ -61,9 +61,9 @@
       {% if presencas %}
         {% for presenca in presencas %}
             <div class="child-card">
-              <div style="padding-left: 71px; padding-top: 37px;"> <div class="child-image"> </div> </div>
-              <div class="custom-name" style="padding-left: 10px;"> 
-                <a id='ver_presenca' href="{% url 'info_presenca' presenca.id_presenca %}" style="color: #ffffff"> {{presenca.data|title}} </a>
+              <div class="child-image"> </div>
+              <div class="custom-name texto-site"> 
+                <a href="{% url 'info_presenca' presenca.id_presenca %}" style="color: #783f04"> {{presenca.data|title}} </a>
               </div>
             </div>
             <hr>

@@ -22,5 +22,14 @@ class Historia05(LiveServerTestCase):
         finalizar_selenium()
 
     def test_005_scenario1(self):
-
+        
         driver = setup_selenium()
+
+        default_page(driver)
+
+        #Clica no botão de doações
+        
+        #Visualiza as doações pelo nome dos padrinhos
+        doacao = driver.find_element(By.ID, 'doacao')
+        doacao.click()
+        time.sleep(1)

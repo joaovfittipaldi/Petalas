@@ -24,41 +24,23 @@ class Historia03(LiveServerTestCase):
     def test_003_scenario1(self):
 
         driver = setup_selenium()
+        default_page(driver)
 
-        #encontra o botão doação e clica
-        doacao = driver.find_element(By.ID, 'doacao')
-        doacao.click()
+        #encontra o botão Doação e clica
+        entra_turmas = driver.find_element(By.ID, 'turmas')
+        entra_turmas.click()
         time.sleep(1)
 
-        #registra nova doacao
-        ver_doacao = driver.find_element(By.ID, 'nova_doacao')
-        ver_doacao.click()
+        # acessa turma
+        ver_turma = driver.find_element(By.ID, 'acessa_turma')
+        ver_turma.click()
         time.sleep(1)
 
+        # seleciona a crianca para visualizar
+        ver_crianca = driver.find_element(By.ID, 'acessa_crianca')
+        ver_crianca.click()
+        time.sleep(1)
+        
 
-# Seu array de IDs
-ids_array = ["elemento1", "elemento2", "elemento3"]
 
-# Caminho para o driver do navegador (certifique-se de ter o driver instalado)
-driver = webdriver.Chrome("caminho/do/seu/chromedriver")
 
-# Itera sobre os IDs no array
-for element_id in ids_array:
-    # Abre uma página de exemplo (substitua pela sua URL)
-    driver.get("https://www.example.com")
-
-    try:
-        # Localiza o elemento com base no ID atual
-        element = driver.find_element_by_id(element_id)
-
-        # Realiza alguma ação no elemento (exemplo: clicar)
-        element.click()
-
-        # Faça mais ações ou asserções conforme necessário
-        # ...
-
-    except Exception as e:
-        print(f"Erro ao interagir com o elemento {element_id}: {e}")
-
-# Fecha o navegador no final dos testes
-driver.quit()
