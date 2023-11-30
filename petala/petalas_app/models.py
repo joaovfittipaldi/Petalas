@@ -7,12 +7,13 @@ class Crianca(models.Model):
     nome = models.TextField(max_length=255)
     idade = models.IntegerField()
     nascimento = models.DateField()
-    status = models.TextField(max_length=255)
-    periodo = models.TextField(max_length=255)
     entrada = models.DateField()
-    permanencia = models.TextField(max_length=255)
     turma = models.TextField(max_length=255)
-    autoavaliacao = models.TextField(max_length=255)
+    cpf_crianca = models.IntegerField()
+    nome_resp = models.TextField(max_length=255)
+    email_resp = models.TextField(max_length=255)
+    tel_resp = models.IntegerField()
+    cpf_resp = models.IntegerField()
 
 class Doacao(models.Model):
     id_doacao = models.AutoField(primary_key=True)

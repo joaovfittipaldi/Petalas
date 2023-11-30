@@ -16,12 +16,13 @@ def cadastro_crianca(request, turma_atual):
         nova_crianca.nome = request.POST.get('nome')
         nova_crianca.idade = request.POST.get('idade')
         nova_crianca.nascimento = request.POST.get('nascimento')
-        nova_crianca.status = request.POST.get('status')
-        nova_crianca.periodo = request.POST.get('periodo')
         nova_crianca.entrada = request.POST.get('entrada')
-        nova_crianca.permanencia = request.POST.get('permanencia')
         nova_crianca.turma = turma_atual
-        nova_crianca.autoavaliacao = request.POST.get('autoavaliacao')
+        nova_crianca.cpf_crianca = request.POST.get('cpf_crianca')
+        nova_crianca.nome_resp = request.POST.get('nome_resp')
+        nova_crianca.cpf_resp = request.POST.get('cpf_resp')
+        nova_crianca.email_resp = request.POST.get('email_resp')
+        nova_crianca.tel_resp = request.POST.get('tel_resp')
         nova_crianca.save()
         
         try:
