@@ -135,6 +135,13 @@
       href="https://drive.google.com/file/d/1NJpos2FSIf5RHu5E6Rm_j0ZJANbAV5OA/view?usp=drive_link"
       >ScreenCast - Aplicação</a
     >
+   </li>
+   <li>
+    <a
+      href="https://drive.google.com/file/d/1StIghtunsVu4lxjkGWZ_Sc63GbpD9H2F/view?usp=sharing"
+      >Issue/Bug Tracker</a
+    >
+  </li>
   
 <h2>Como utilizar a aplicação localmente</h2>
 <ol>
