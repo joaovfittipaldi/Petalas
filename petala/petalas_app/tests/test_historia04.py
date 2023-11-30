@@ -40,7 +40,7 @@ class Historia04(LiveServerTestCase):
         # insere o nome do padrinho 
         padrinho_doacao = driver.find_element(By.ID, 'inputNomePadrinho')
         padrinho_doacao.click()
-        padrinho_doacao.send_keys('Marcos Pedro')
+        padrinho_doacao.send_keys('Luis Rafael')
         time.sleep(1)
 
         # insere o cpf do padrinho 
@@ -58,7 +58,7 @@ class Historia04(LiveServerTestCase):
         # insere o nome da criança
         crianca_doacao = driver.find_element(By.ID, 'inputNomeCrianca')
         crianca_doacao.click()
-        crianca_doacao.send_keys('Matheus Henrique')
+        crianca_doacao.send_keys(' jordao rafael')
         time.sleep(1)
     
         # insere a descricao da doacao 
@@ -92,7 +92,7 @@ class Historia04(LiveServerTestCase):
         # insere o nome do padrinho 
         padrinho_doacao = driver.find_element(By.ID, 'inputNomePadrinho')
         padrinho_doacao.click()
-        padrinho_doacao.send_keys('João Marcelo')
+        padrinho_doacao.send_keys('marcelo vittibaldi')
         time.sleep(1)
 
         # insere o cpf do padrinho 
@@ -110,7 +110,7 @@ class Historia04(LiveServerTestCase):
         # insere o nome da criança
         crianca_doacao = driver.find_element(By.ID, 'inputNomeCrianca')
         crianca_doacao.click()
-        crianca_doacao.send_keys('Márcio Felipe')
+        crianca_doacao.send_keys('vinicius aleluia')
         time.sleep(1)
     
         # insere a descricao da doacao 

@@ -41,4 +41,20 @@ class Historia09(LiveServerTestCase):
         ver_lista = driver.find_element(By.ID, 'lista_presenca')
         ver_lista.click()
         time.sleep(1)
+        
+        # adiciona lista de presenca 
+        add_novo_dia = driver.find_element(By.ID, 'novo_dia')
+        add_novo_dia.click()
+        time.sleep(1)
 
+        # adiciona lista de presenca 
+        abre_chamada = driver.find_element(By.ID, 'inputData')
+        abre_chamada.click()
+        abre_chamada.send_keys('10112023')
+        time.sleep(1)
+
+        seleciona_crianca = driver.find_element(By.ID, 'checkCrianca')
+        seleciona_crianca.click()
+        
+        confirma_crianca = driver.find_element(By.ID, 'cadastro_dia')
+        confirma_crianca.click()
